@@ -40,4 +40,12 @@
     <loc>https://bolus095.github.io/nordforge-studio/audits/dbjourney-com.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/timwendelboe-no.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/kaffebrenneriet-no.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
