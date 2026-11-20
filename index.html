@@ -10,6 +10,7 @@
   <meta property="og:description" content="Eliminate bloated third-party scripts, fix broken conversion leaks, and ship fast with bespoke 40-point audits and MIT-licensed Liquid/Node.js engineering kits." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bolus095.github.io/nordforge-studio/" />
+  <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,94 +37,6 @@
     }
   }
   </script>
-  <style>
-    :root {
-      --bg: #070b12;
-      --surface: #0e1523;
-      --surface-2: #141e30;
-      --border: #1e2d45;
-      --text: #e6edf7;
-      --muted: #93a4bd;
-      --accent: #38bdf8;
-      --accent-2: #10b981;
-      --warn: #f59e0b;
-      --radius: 14px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle at top right, #10203a 0%, var(--bg) 48%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 22px; }
-    header {
-      position: sticky; top: 0; z-index: 40;
-      background: rgba(7, 11, 18, 0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 16px; flex-wrap: wrap; }
-    .brand { font-weight: 800; letter-spacing: -0.02em; font-size: 1.15rem; color: #fff; display: flex; align-items: center; gap: 10px; }
-    .brand-dot { width: 10px; height: 10px; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 14px var(--accent); }
-    .nav-links { display: flex; gap: 20px; font-size: 0.92rem; flex-wrap: wrap; align-items: center; }
-    .nav-links a { color: var(--muted); font-weight: 500; }
-    .nav-links a:hover { color: #fff; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 12px 20px; border-radius: 10px; font-weight: 600; font-size: 0.95rem;
-      border: 1px solid transparent; cursor: pointer; transition: transform .15s ease, filter .15s ease;
-    }
-    .btn:hover { transform: translateY(-1px); filter: brightness(1.08); }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #041019; }
-    .btn-outline { background: transparent; border-color: var(--border); color: var(--text); }
-    .hero { padding: 72px 0 48px; text-align: left; display: grid; grid-template-columns: 1.25fr 0.95fr; gap: 36px; align-items: center; }
-    @media (max-width: 880px) { .hero { grid-template-columns: 1fr; padding-top: 44px; } }
-    .badge {
-      display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-      padding: 6px 12px; border-radius: 999px; background: rgba(56, 189, 248, 0.12); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.25);
-      margin-bottom: 16px;
-    }
-    h1 { font-size: clamp(2.1rem, 4.2vw, 3.2rem); line-height: 1.12; margin: 0 0 18px; letter-spacing: -0.03em; }
-    .lead { font-size: 1.08rem; color: var(--muted); margin: 0 0 28px; max-width: 60ch; }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; }
-    .trust-strip { display: flex; gap: 22px; flex-wrap: wrap; color: var(--muted); font-size: 0.85rem; }
-    .trust-strip span { display: inline-flex; align-items: center; gap: 6px; }
-    .card {
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 24px; box-shadow: 0 12px 34px rgba(0, 0, 0, 0.28);
-    }
-    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
-    .field label { display: block; font-size: 0.78rem; color: var(--muted); margin-bottom: 5px; font-weight: 600; }
-    .field input {
-      width: 100%; background: var(--bg); border: 1px solid var(--border); color: #fff;
-      padding: 10px 12px; border-radius: 8px; font-size: 0.95rem;
-    }
-    .calc-out {
-      background: var(--surface-2); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 12px;
-      padding: 16px; margin-top: 8px;
-    }
-    .calc-num { font-size: 1.65rem; font-weight: 800; color: var(--accent-2); }
-    section { padding: 52px 0; }
-    .section-head { margin-bottom: 28px; }
-    .section-head h2 { font-size: clamp(1.5rem, 3vw, 2.15rem); margin: 0 0 8px; letter-spacing: -0.02em; }
-    .section-head p { color: var(--muted); margin: 0; max-width: 65ch; }
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
-    .offer-card { display: flex; flex-direction: column; justify-content: space-between; }
-    .price-row { display: flex; align-items: baseline; justify-content: space-between; margin: 12px 0; }
-    .price { font-size: 1.9rem; font-weight: 800; color: #fff; }
-    .tag { font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: rgba(16,185,129,0.14); color: var(--accent-2); }
-    .tag-blue { background: rgba(56,189,248,0.14); color: var(--accent); }
-    ul.clean { padding-left: 18px; margin: 12px 0 22px; color: var(--muted); font-size: 0.92rem; }
-    ul.clean li { margin-bottom: 7px; }
-    .audits-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-    .audit-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
-    footer { border-top: 1px solid var(--border); padding: 40px 0 56px; color: var(--muted); font-size: 0.88rem; }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; }
-  </style>
 </head>
 <body>
   <header>
@@ -160,8 +73,8 @@
       </div>
 
       <div id="calculator" class="card">
-        <h3 style="margin-top:0; margin-bottom:6px;">Instant CRO &amp; Speed Leak Estimator</h3>
-        <p style="color:var(--muted); font-size:0.86rem; margin-top:0; margin-bottom:16px;">
+        <h3 class="calc-title">Instant CRO &amp; Speed Leak Estimator</h3>
+        <p class="calc-desc">
           Conservative benchmark of revenue left on the table by slow scripts (&gt;3s) and missing checkout/cart friction fixes.
         </p>
         <div class="calc-grid">
@@ -183,9 +96,9 @@
           </div>
         </div>
         <div class="calc-out">
-          <div style="font-size:0.8rem; color:var(--muted);">Estimated Recoverable Monthly Upside (Conservative +0.35%–0.65% CVR band)</div>
+          <div class="calc-label">Estimated Recoverable Monthly Upside (Conservative +0.35%–0.65% CVR band)</div>
           <div id="c-upside" class="calc-num">$3,120 – $5,070 / mo</div>
-          <div id="c-payback" style="font-size:0.84rem; color:var(--text); margin-top:6px;">
+          <div id="c-payback" class="calc-payback">
             $49 Custom Fix Pack breaks even on just <strong>1 extra order</strong>.
           </div>
         </div>
@@ -201,9 +114,9 @@
         <div class="card offer-card">
           <div>
             <span class="tag">Instant ZIP Delivery</span>
-            <h3 style="margin:12px 0 4px;">B2B Proof-First Outreach &amp; FFmpeg Shorts Vault</h3>
+            <h3 class="offer-title">B2B Proof-First Outreach &amp; FFmpeg Shorts Vault</h3>
             <div class="price-row"><span class="price">$19</span><span class="mono">b2b-growth-ffmpeg-vault.zip</span></div>
-            <p style="color:var(--muted); font-size:0.9rem;">Engineered cold-email frameworks (EN/NO/DE), 50+ CRO/SEO debugging prompts, and automated Playwright + FFmpeg 9:16 Reels/Shorts renderer.</p>
+            <p class="offer-desc">Engineered cold-email frameworks (EN/NO/DE), 50+ CRO/SEO debugging prompts, and automated Playwright + FFmpeg 9:16 Reels/Shorts renderer.</p>
             <ul class="clean">
               <li>Truthful Proof-First email templates &amp; follow-ups</li>
               <li><code>render-promo-media.mjs</code> 1080x1920 MP4 + 2:3 Pin builder</li>
@@ -213,12 +126,12 @@
           <a class="btn btn-outline" href="https://buy.stripe.com/cNibJ03ZpcxL5b02Fccs81k" target="_blank" rel="noopener">Buy $19 via Stripe &rarr;</a>
         </div>
 
-        <div class="card offer-card" style="border-color: rgba(56,189,248,0.5);">
+        <div class="card offer-card offer-featured-blue">
           <div>
             <span class="tag tag-blue">Best Seller for Shopify</span>
-            <h3 style="margin:12px 0 4px;">Shopify Zero-Friction CRO &amp; Speed Liquid Kit (2026)</h3>
+            <h3 class="offer-title">Shopify Zero-Friction CRO &amp; Speed Liquid Kit (2026)</h3>
             <div class="price-row"><span class="price">$29</span><span class="mono">shopify-cro-speed-kit-2026.zip</span></div>
-            <p style="color:var(--muted); font-size:0.9rem;">Replace expensive monthly Shopify apps with native zero-bloat Liquid sections and run the Playwright script to flag slow legacy app embeds.</p>
+            <p class="offer-desc">Replace expensive monthly Shopify apps with native zero-bloat Liquid sections and run the Playwright script to flag slow legacy app embeds.</p>
             <ul class="clean">
               <li>Dynamic Cart Free-Shipping Progress Bar Liquid</li>
               <li>1-Click Sticky Buy + Direct Checkout Discount Liquid</li>
@@ -232,9 +145,9 @@
         <div class="card offer-card">
           <div>
             <span class="tag">Full Agency Source Code</span>
-            <h3 style="margin:12px 0 4px;">Autonomous B2B Audit &amp; Multi-Model AI Agency Starter Kit</h3>
+            <h3 class="offer-title">Autonomous B2B Audit &amp; Multi-Model AI Agency Starter Kit</h3>
             <div class="price-row"><span class="price">$49</span><span class="mono">ai-agency-audit-os-kit.zip</span></div>
-            <p style="color:var(--muted); font-size:0.9rem;">Run your own proof-first B2B audit studio locally with real Chromium scanning, quota-aware multi-model routing, and zero-server Stripe fulfillment.</p>
+            <p class="offer-desc">Run your own proof-first B2B audit studio locally with real Chromium scanning, quota-aware multi-model routing, and zero-server Stripe fulfillment.</p>
             <ul class="clean">
               <li>Playwright Forensic Scanner + HTML report generator</li>
               <li>Quota-aware multi-tier LLM router with automatic failover</li>
@@ -252,12 +165,12 @@
         <p>Already saw your public teaser report? Upgrade to the complete 40-point engineering fix pack or let us implement every patch in 48 hours.</p>
       </div>
       <div class="grid-3">
-        <div class="card offer-card" style="border-color: rgba(16,185,129,0.5);">
+        <div class="card offer-card offer-featured-green">
           <div>
             <span class="tag">Fastest ROI</span>
-            <h3 style="margin:12px 0 4px;">Custom 40-Point Website Conversion, Speed &amp; SEO Fix Pack</h3>
-            <div class="price-row"><span class="price">$49</span><span class="muted" style="font-size:0.85rem;">One-time</span></div>
-            <p style="color:var(--muted); font-size:0.9rem;">A full forensic teardown of your exact store or B2B domain with waterfall measurements, mobile screenshot diagnostics, and ready-to-paste HTML/Liquid/JSON-LD code.</p>
+            <h3 class="offer-title">Custom 40-Point Website Conversion, Speed &amp; SEO Fix Pack</h3>
+            <div class="price-row"><span class="price">$49</span><span class="price-note">One-time</span></div>
+            <p class="offer-desc">A full forensic teardown of your exact store or B2B domain with waterfall measurements, mobile screenshot diagnostics, and ready-to-paste HTML/Liquid/JSON-LD code.</p>
             <ul class="clean">
               <li>Complete 40-point CRO, Core Web Vitals &amp; SEO matrix</li>
               <li>Exact third-party script &amp; payload bloat breakdown</li>
@@ -270,9 +183,9 @@
         <div class="card offer-card">
           <div>
             <span class="tag tag-blue">Hands-Free Execution</span>
-            <h3 style="margin:12px 0 4px;">Done-For-You 48h Website Speed, CRO &amp; SEO Rescue</h3>
-            <div class="price-row"><span class="price">$199</span><span class="muted" style="font-size:0.85rem;">One-time</span></div>
-            <p style="color:var(--muted); font-size:0.9rem;">We directly apply the 40-point cleanup in your theme or site repo: remove heavy render-blocking bloat, fix broken images/overflow, and deploy zero-fee CRO modules.</p>
+            <h3 class="offer-title">Done-For-You 48h Website Speed, CRO &amp; SEO Rescue</h3>
+            <div class="price-row"><span class="price">$199</span><span class="price-note">One-time</span></div>
+            <p class="offer-desc">We directly apply the 40-point cleanup in your theme or site repo: remove heavy render-blocking bloat, fix broken images/overflow, and deploy zero-fee CRO modules.</p>
             <ul class="clean">
               <li>Full implementation + before/after Playwright verification</li>
               <li>JSON-LD Schema &amp; Google Merchant compliance pass</li>
@@ -285,9 +198,9 @@
         <div class="card offer-card">
           <div>
             <span class="tag">Continuous Protection</span>
-            <h3 style="margin:12px 0 4px;">AI Growth, Weekly Forensic Audits &amp; CRO Retainer</h3>
-            <div class="price-row"><span class="price">$299</span><span class="muted" style="font-size:0.85rem;">/ month</span></div>
-            <p style="color:var(--muted); font-size:0.9rem;">Weekly automated Chromium telemetry checks, Search Console &amp; Merchant feed monitoring, and ongoing conversion patch deployments. Cancel anytime in 1 click.</p>
+            <h3 class="offer-title">AI Growth, Weekly Forensic Audits &amp; CRO Retainer</h3>
+            <div class="price-row"><span class="price">$299</span><span class="price-note">/ month</span></div>
+            <p class="offer-desc">Weekly automated Chromium telemetry checks, Search Console &amp; Merchant feed monitoring, and ongoing conversion patch deployments. Cancel anytime in 1 click.</p>
             <ul class="clean">
               <li>Weekly forensic speed &amp; regression snapshots</li>
               <li>Monthly high-impact CRO &amp; schema updates</li>
@@ -307,64 +220,64 @@
       <div id="live-audits-grid" class="audits-list">
         <!-- LIVE_AUDITS_START -->
         <div class="audit-item">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="audit-item-head">
             <strong>kaffebrenneriet.no</strong>
             <span class="tag">81/100</span>
           </div>
-          <p style="color:var(--muted);font-size:0.86rem;margin:0 0 10px;">
+          <p class="audit-item-meta">
             DOM 925ms &bull; 6 scripts &bull; 2189 KB &bull; 0 schemas
           </p>
-          <a href="audits/kaffebrenneriet-no.html" style="font-size:0.88rem;font-weight:600;">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/kaffebrenneriet-no.html">Inspect Live Teaser &rarr;</a>
         </div>
         <div class="audit-item">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="audit-item-head">
             <strong>timwendelboe.no</strong>
             <span class="tag">73/100</span>
           </div>
-          <p style="color:var(--muted);font-size:0.86rem;margin:0 0 10px;">
+          <p class="audit-item-meta">
             DOM 1596ms &bull; 38 scripts &bull; 25122 KB &bull; 2 schemas
           </p>
-          <a href="audits/timwendelboe-no.html" style="font-size:0.88rem;font-weight:600;">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/timwendelboe-no.html">Inspect Live Teaser &rarr;</a>
         </div>
         <div class="audit-item">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="audit-item-head">
             <strong>dbjourney.com</strong>
             <span class="tag">67/100</span>
           </div>
-          <p style="color:var(--muted);font-size:0.86rem;margin:0 0 10px;">
+          <p class="audit-item-meta">
             DOM 3801ms &bull; 63 scripts &bull; 38870 KB &bull; 2 schemas
           </p>
-          <a href="audits/dbjourney-com.html" style="font-size:0.88rem;font-weight:600;">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/dbjourney-com.html">Inspect Live Teaser &rarr;</a>
         </div>
         <div class="audit-item">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="audit-item-head">
             <strong>varsityheadwear.com</strong>
             <span class="tag">72/100</span>
           </div>
-          <p style="color:var(--muted);font-size:0.86rem;margin:0 0 10px;">
+          <p class="audit-item-meta">
             DOM 1277ms &bull; 40 scripts &bull; 6261 KB &bull; 0 schemas
           </p>
-          <a href="audits/varsityheadwear-com.html" style="font-size:0.88rem;font-weight:600;">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/varsityheadwear-com.html">Inspect Live Teaser &rarr;</a>
         </div>
         <div class="audit-item">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="audit-item-head">
             <strong>scandinavianbiolabs.com</strong>
             <span class="tag">67/100</span>
           </div>
-          <p style="color:var(--muted);font-size:0.86rem;margin:0 0 10px;">
+          <p class="audit-item-meta">
             DOM 4132ms &bull; 53 scripts &bull; 4848 KB &bull; 1 schemas
           </p>
-          <a href="audits/scandinavianbiolabs-com.html" style="font-size:0.88rem;font-weight:600;">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/scandinavianbiolabs-com.html">Inspect Live Teaser &rarr;</a>
         </div>
         <div class="audit-item">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <div class="audit-item-head">
             <strong>bambusa.no</strong>
             <span class="tag">77/100</span>
           </div>
-          <p style="color:var(--muted);font-size:0.86rem;margin:0 0 10px;">
+          <p class="audit-item-meta">
             DOM 1530ms &bull; 30 scripts &bull; 14369 KB &bull; 1 schemas
           </p>
-          <a href="audits/bambusa-no.html" style="font-size:0.88rem;font-weight:600;">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/bambusa-no.html">Inspect Live Teaser &rarr;</a>
         </div>
         <!-- LIVE_AUDITS_END -->
       </div>
@@ -373,18 +286,18 @@
 
   <footer>
     <div class="container">
-      <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:18px; margin-bottom:14px;">
+      <div class="footer-grid">
         <div>
-          <strong style="color:#fff;">NordForge AI Studio</strong><br />
+          <strong class="footer-title">NordForge AI Studio</strong><br />
           Independent E-Commerce CRO, Speed &amp; AI Automation Engineering &bull; Norway<br />
           Direct Support &amp; Custom Quotes: <a href="mailto:bolus132@gmail.com">bolus132@gmail.com</a>
         </div>
-        <div style="max-width:460px;">
-          <strong style="color:#fff;">Fulfillment &amp; Refund Policy</strong><br />
+        <div class="footer-policy">
+          <strong class="footer-title">Fulfillment &amp; Refund Policy</strong><br />
           All payments process securely on Stripe. Digital toolkits deliver via email automatically within minutes of payment confirmation. 14-day honest refund guarantee if any kit or audit fails to run as documented.
         </div>
       </div>
-      <div style="font-size:0.8rem; color:#6d7f99;">&copy; 2026 NordForge AI Studio. All metrics presented in public audits are captured live via Playwright.</div>
+      <div class="footer-copy">&copy; 2026 NordForge AI Studio. All metrics presented in public audits are captured live via Playwright.</div>
     </div>
   </footer>
 

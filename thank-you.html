@@ -5,33 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Order Confirmed | NordForge AI Studio</title>
   <meta name="robots" content="noindex,nofollow" />
-  <style>
-    body {
-      margin: 0; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #070b12; color: #e6edf7; display: grid; place-items: center; min-height: 100vh; padding: 24px;
-    }
-    .box {
-      max-width: 640px; width: 100%; background: #0e1523; border: 1px solid #1e2d45;
-      border-radius: 16px; padding: 32px; box-shadow: 0 20px 48px rgba(0,0,0,0.4);
-    }
-    .ok { display: inline-block; padding: 6px 12px; border-radius: 999px; font-size: 0.78rem; font-weight: 700; background: rgba(16,185,129,0.16); color: #10b981; margin-bottom: 14px; }
-    h1 { margin: 0 0 12px; font-size: 1.85rem; }
-    p, li { color: #93a4bd; line-height: 1.65; }
-    a { color: #38bdf8; }
-    .cta { display: inline-block; margin-top: 18px; padding: 12px 20px; border-radius: 10px; background: linear-gradient(135deg,#38bdf8,#10b981); color: #041019; font-weight: 700; text-decoration: none; }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <div class="box">
-    <span class="ok">&#10003; Stripe Payment Confirmed</span>
+<body class="thank-you-page">
+  <div class="thank-you-box">
+    <span class="thank-you-ok">&#10003; Stripe Payment Confirmed</span>
     <h1>Thank You From NordForge AI Studio</h1>
     <p id="sku-msg">Your order has been logged by our automated fulfillment system.</p>
     <ul>
       <li><strong>Digital Software Toolkits ($19 / $29 / $49):</strong> Our fulfillment engine automatically emails your private ZIP download link and quickstart documentation to your Stripe checkout email within a few minutes.</li>
       <li><strong>Custom 40-Point Fix Pack ($49), 48h Rescue ($199), or Retainer ($299/mo):</strong> Send your target store URL now so our senior engineer can begin immediate Playwright telemetry &amp; patching.</li>
     </ul>
-    <a class="cta" id="mailto-btn" href="mailto:bolus132@gmail.com?subject=NordForge%20Order%20Target%20URL">Send Store URL / Request Support &rarr;</a>
-    <p style="margin-top:20px; font-size:0.86rem;"><a href="./">&larr; Return to NordForge AI Studio</a></p>
+    <a class="thank-you-cta" id="mailto-btn" href="mailto:bolus132@gmail.com?subject=NordForge%20Order%20Target%20URL">Send Store URL / Request Support &rarr;</a>
+    <p class="thank-you-back"><a href="./">&larr; Return to NordForge AI Studio</a></p>
   </div>
   <script>
     const params = new URLSearchParams(window.location.search);
