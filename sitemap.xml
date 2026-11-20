@@ -4,4 +4,40 @@
     <loc>https://bolus095.github.io/nordforge-studio/</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/norwegianrain-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/kaffebox-no.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/northernplayground-no.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/kaibosh-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/amundsensports-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/bambusa-no.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/scandinavianbiolabs-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/varsityheadwear-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/dbjourney-com.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
