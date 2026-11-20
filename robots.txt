@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bolus095.github.io/nordforge-studio/sitemap.xml
