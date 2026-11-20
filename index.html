@@ -44,7 +44,8 @@
       <a class="brand" href="#top"><span class="brand-dot"></span>NordForge AI Studio</a>
       <nav class="nav-links">
         <a href="#calculator">Leak Calculator</a>
-        <a href="#toolkits">Software Toolkits</a>
+        <a href="#preview">Live Demo</a>
+        <a href="#toolkits">Toolkits ($9&ndash;$49)</a>
         <a href="#services">B2B Audits &amp; Rescue</a>
         <a href="#audits">Live Audits</a>
         <a href="mailto:bolus132@gmail.com">Contact</a>
@@ -61,8 +62,8 @@
           We run real Chromium Playwright telemetry on live websites and Online Store 2.0 storefronts to expose hidden speed bottlenecks, broken mobile layouts, missing JSON-LD schemas, and silent checkout leaks — then ship clean engineering patches and MIT-licensed software kits.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#services">Order Custom 40-Point Fix Pack ($49)</a>
-          <a class="btn btn-outline" href="#toolkits">Browse Engineering Kits ($19–$49)</a>
+          <a class="btn btn-primary" href="#toolkits">Start With $9 Quick-Win Pack</a>
+          <a class="btn btn-outline" href="#preview">Inspect Live Widget Demo</a>
         </div>
         <div class="trust-strip">
           <span>&#9679; Operated from Norway</span>
@@ -105,12 +106,111 @@
       </div>
     </section>
 
+    <div class="free-banner" id="free-tools">
+      <div class="free-banner-copy">
+        <h3>Try Free First: Open-Source Bloat CLI + 1-Click Free Store Audit</h3>
+        <p>Run our MIT-licensed Playwright script on your store locally — or email your URL and get a free Chromium visual teardown published within minutes.</p>
+      </div>
+      <div class="free-banner-actions">
+        <a class="btn btn-outline" href="https://github.com/BoluS095/shopify-speed-bloat-auditor" target="_blank" rel="noopener">Free GitHub Bloat CLI &rarr;</a>
+        <a class="btn btn-primary" href="mailto:bolus132@gmail.com?subject=Free%20Store%20Audit%20Request&body=Please%20audit%20my%20store%20URL:%20https://">Request Free Audit &rarr;</a>
+      </div>
+    </div>
+
+    <section id="preview">
+      <div class="section-head">
+        <h2>Live Interactive Preview: Inspect Before You Buy</h2>
+        <p>Test real zero-bloat modules from the $9 Quick-Win Pack &amp; $29 Liquid Kit right here in your browser before touching Shopify theme code.</p>
+      </div>
+      <div class="preview-shell">
+        <div class="preview-tabs" role="tablist">
+          <button type="button" class="tab-btn is-active" data-tab="ship" role="tab" aria-selected="true">Free Shipping Bar Demo</button>
+          <button type="button" class="tab-btn" data-tab="quiz" role="tab" aria-selected="false">Product-Match Quiz Demo</button>
+          <button type="button" class="tab-btn" data-tab="code" role="tab" aria-selected="false">Real Source Code Excerpt</button>
+        </div>
+
+        <div class="preview-panel is-active" id="panel-ship">
+          <div class="demo-box">
+            <div class="demo-ship-card">
+              <div class="demo-ship-msg" id="demo-ship-text">Cart: <strong>$25</strong> &mdash; Add <strong>$50</strong> for <strong>FREE Express Shipping</strong> &middot; Code <code>SAVE20</code></div>
+              <div class="demo-track">
+                <div class="demo-fill w-33" id="demo-ship-fill"></div>
+              </div>
+            </div>
+            <div class="demo-controls">
+              <button type="button" class="btn btn-primary" id="demo-add-25">+ Add $25 Item</button>
+              <button type="button" class="btn btn-outline" id="demo-reset-cart">Reset Cart ($0)</button>
+              <a class="btn btn-outline" href="https://buy.stripe.com/28E4gy2Vl41ffPEdjQcs81i" target="_blank" rel="noopener">Get Full Liquid Kit ($29) &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-panel" id="panel-quiz">
+          <div class="demo-box">
+            <strong>1. Primary Store Bottleneck</strong>
+            <div class="quiz-chips" id="quiz-pain-chips">
+              <button type="button" class="quiz-chip is-selected" data-pain="schema">Slow Speed / Missing Schema</button>
+              <button type="button" class="quiz-chip" data-pain="apps">Paying Monthly for Cart/Quiz Apps</button>
+              <button type="button" class="quiz-chip" data-pain="full">Custom 40-Point Teardown</button>
+            </div>
+            <strong>2. Implementation Preference</strong>
+            <div class="quiz-chips" id="quiz-mode-chips">
+              <button type="button" class="quiz-chip is-selected" data-mode="diy">DIY Copy-Paste Code</button>
+              <button type="button" class="quiz-chip" data-mode="dfy">Engineer Audits / Fixes It For Me</button>
+            </div>
+            <div class="quiz-result">
+              <div>
+                <h4 class="quiz-rec-title" id="quiz-rec-title">Shopify Speed &amp; Schema Emergency Quick-Win Pack ($9)</h4>
+                <p class="quiz-rec-desc" id="quiz-rec-desc">Instant JSON-LD Organization/Product schema, 390px overflow CSS guard, and 40-point speed checklist.</p>
+              </div>
+              <a class="btn btn-primary" id="quiz-rec-cta" href="https://buy.stripe.com/7sYfZggMbcxL6f4gw2cs81o" target="_blank" rel="noopener">Unlock via Stripe ($9) &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-panel" id="panel-code">
+          <pre class="code-preview"><code>{% comment %} Excerpt from nf-seo-jsonld-schema.liquid ($9 Quick-Win &amp; $29 Liquid Kit) {% endcomment %}
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": {{ cart.currency.iso_code | default: shop.currency | json }},
+    "price": {{ current_variant.price | money_without_currency | replace: ',', '.' | json }},
+    "availability": "https://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}"
+  }
+}
+&lt;/script&gt;
+
+/* Excerpt from nf-mobile-overflow-cls-patch.css ($9 Quick-Win Pack) */
+html, body { max-width: 100%; overflow-x: clip; }
+.shopify-section { max-width: 100vw; overflow-x: clip; }</code></pre>
+        </div>
+      </div>
+    </section>
+
     <section id="toolkits">
       <div class="section-head">
-        <h2>Packaged Developer &amp; Merchant Toolkits</h2>
+        <h2>Packaged Developer &amp; Merchant Toolkits ($9–$49)</h2>
         <p>Production codebases &amp; Online Store 2.0 snippets packaged as ready-to-run ZIP archives. Delivered automatically via email after Stripe checkout.</p>
       </div>
-      <div class="grid-3">
+      <div class="grid-4">
+        <div class="card offer-card offer-featured-green">
+          <div>
+            <span class="tag">Lowest Barrier</span>
+            <h3 class="offer-title">Shopify Speed &amp; Schema Quick-Win Pack</h3>
+            <div class="price-row"><span class="price">$9</span><span class="mono">shopify-speed-quickwin-9.zip</span></div>
+            <p class="offer-desc">Fix zero JSON-LD schemas, 390px mobile overflow, and third-party script bloat in 15 minutes.</p>
+            <ul class="clean">
+              <li><code>nf-seo-jsonld-schema.liquid</code></li>
+              <li><code>nf-mobile-overflow-cls-patch.css</code></li>
+              <li>Playwright Bloat Scanner + 40-Point Checklist</li>
+            </ul>
+          </div>
+          <a class="btn btn-primary" href="https://buy.stripe.com/7sYfZggMbcxL6f4gw2cs81o" target="_blank" rel="noopener">Buy $9 via Stripe &rarr;</a>
+        </div>
         <div class="card offer-card">
           <div>
             <span class="tag">Instant ZIP Delivery</span>
@@ -221,6 +321,36 @@
         <!-- LIVE_AUDITS_START -->
         <div class="audit-item">
           <div class="audit-item-head">
+            <strong>johnhenric.com</strong>
+            <span class="tag">67/100</span>
+          </div>
+          <p class="audit-item-meta">
+            DOM 4066ms &bull; 38 scripts &bull; 3611 KB &bull; 0 schemas
+          </p>
+          <a class="audit-item-link" href="audits/johnhenric-com.html">Inspect Live Teaser &rarr;</a>
+        </div>
+        <div class="audit-item">
+          <div class="audit-item-head">
+            <strong>hestragloves.com</strong>
+            <span class="tag">90/100</span>
+          </div>
+          <p class="audit-item-meta">
+            DOM 413ms &bull; 4 scripts &bull; 1424 KB &bull; 0 schemas
+          </p>
+          <a class="audit-item-link" href="audits/hestragloves-com.html">Inspect Live Teaser &rarr;</a>
+        </div>
+        <div class="audit-item">
+          <div class="audit-item-head">
+            <strong>lividjeans.com</strong>
+            <span class="tag">68/100</span>
+          </div>
+          <p class="audit-item-meta">
+            DOM 1809ms &bull; 49 scripts &bull; 32791 KB &bull; 0 schemas
+          </p>
+          <a class="audit-item-link" href="audits/lividjeans-com.html">Inspect Live Teaser &rarr;</a>
+        </div>
+        <div class="audit-item">
+          <div class="audit-item-head">
             <strong>kaffebrenneriet.no</strong>
             <span class="tag">81/100</span>
           </div>
@@ -248,36 +378,6 @@
             DOM 3801ms &bull; 63 scripts &bull; 38870 KB &bull; 2 schemas
           </p>
           <a class="audit-item-link" href="audits/dbjourney-com.html">Inspect Live Teaser &rarr;</a>
-        </div>
-        <div class="audit-item">
-          <div class="audit-item-head">
-            <strong>varsityheadwear.com</strong>
-            <span class="tag">72/100</span>
-          </div>
-          <p class="audit-item-meta">
-            DOM 1277ms &bull; 40 scripts &bull; 6261 KB &bull; 0 schemas
-          </p>
-          <a class="audit-item-link" href="audits/varsityheadwear-com.html">Inspect Live Teaser &rarr;</a>
-        </div>
-        <div class="audit-item">
-          <div class="audit-item-head">
-            <strong>scandinavianbiolabs.com</strong>
-            <span class="tag">67/100</span>
-          </div>
-          <p class="audit-item-meta">
-            DOM 4132ms &bull; 53 scripts &bull; 4848 KB &bull; 1 schemas
-          </p>
-          <a class="audit-item-link" href="audits/scandinavianbiolabs-com.html">Inspect Live Teaser &rarr;</a>
-        </div>
-        <div class="audit-item">
-          <div class="audit-item-head">
-            <strong>bambusa.no</strong>
-            <span class="tag">77/100</span>
-          </div>
-          <p class="audit-item-meta">
-            DOM 1530ms &bull; 30 scripts &bull; 14369 KB &bull; 1 schemas
-          </p>
-          <a class="audit-item-link" href="audits/bambusa-no.html">Inspect Live Teaser &rarr;</a>
         </div>
         <!-- LIVE_AUDITS_END -->
       </div>
@@ -324,6 +424,117 @@
         if (el) el.addEventListener("input", recalc);
       });
       recalc();
+
+      // Interactive Preview Tabs
+      const tabBtns = document.querySelectorAll(".tab-btn[data-tab]");
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const target = this.getAttribute("data-tab");
+          tabBtns.forEach((b) => {
+            const active = b === this;
+            b.classList.toggle("is-active", active);
+            b.setAttribute("aria-selected", active ? "true" : "false");
+          });
+          document.querySelectorAll(".preview-panel").forEach((p) => {
+            p.classList.toggle("is-active", p.id === "panel-" + target);
+          });
+        });
+      });
+
+      // Live Demo 1: Shipping Bar
+      let demoTotal = 25;
+      function renderDemoShip() {
+        const fill = document.getElementById("demo-ship-fill");
+        const msg = document.getElementById("demo-ship-text");
+        if (!fill || !msg) return;
+        fill.classList.remove("w-0", "w-33", "w-67", "w-100");
+        if (demoTotal <= 0) {
+          fill.classList.add("w-0");
+          msg.innerHTML = "Cart: <strong>$0</strong> &mdash; Add <strong>$75</strong> for <strong>FREE Express Shipping</strong> &middot; Code <code>SAVE20</code>";
+        } else if (demoTotal === 25) {
+          fill.classList.add("w-33");
+          msg.innerHTML = "Cart: <strong>$25</strong> &mdash; Add <strong>$50</strong> for <strong>FREE Express Shipping</strong> &middot; Code <code>SAVE20</code>";
+        } else if (demoTotal === 50) {
+          fill.classList.add("w-67");
+          msg.innerHTML = "Cart: <strong>$50</strong> &mdash; Only <strong>$25</strong> left for <strong>FREE Express Shipping</strong> &middot; Code <code>SAVE20</code>";
+        } else {
+          fill.classList.add("w-100");
+          msg.innerHTML = "<strong>FREE Express Shipping UNLOCKED!</strong> &middot; Cart: <strong>$" + demoTotal + "</strong> &middot; Code <code>SAVE20</code>";
+        }
+      }
+      document.getElementById("demo-add-25")?.addEventListener("click", function () {
+        demoTotal = demoTotal >= 75 ? 75 : demoTotal + 25;
+        renderDemoShip();
+      });
+      document.getElementById("demo-reset-cart")?.addEventListener("click", function () {
+        demoTotal = 0;
+        renderDemoShip();
+      });
+
+      // Live Demo 2: Product-Match Quiz Recommendation
+      let quizPain = "schema";
+      let quizMode = "diy";
+      const RECS = {
+        "schema:diy": {
+          title: "Shopify Speed & Schema Emergency Quick-Win Pack ($9)",
+          desc: "Instant JSON-LD Organization/Product schema, 390px overflow CSS guard, and 40-point speed checklist.",
+          cta: "Unlock via Stripe ($9) \u2192",
+          url: "https://buy.stripe.com/7sYfZggMbcxL6f4gw2cs81o",
+        },
+        "apps:diy": {
+          title: "Shopify Zero-Friction CRO & Speed Liquid Kit ($29)",
+          desc: "Replace monthly cart bar, sticky buy, and product quiz apps with native 2 KB Online Store 2.0 Liquid.",
+          cta: "Unlock via Stripe ($29) \u2192",
+          url: "https://buy.stripe.com/28E4gy2Vl41ffPEdjQcs81i",
+        },
+        "full:diy": {
+          title: "Custom 40-Point Website Conversion, Speed & SEO Fix Pack ($49)",
+          desc: "Domain-specific Chromium forensic teardown + ranked engineering patches delivered within 24 hours.",
+          cta: "Order Fix Pack ($49) \u2192",
+          url: "https://buy.stripe.com/3cI00i67x69n7j893Acs81l",
+        },
+        "schema:dfy": {
+          title: "Done-For-You 48h Website Speed, CRO & SEO Rescue ($199)",
+          desc: "We clean slow scripts, broken images, overflow, and JSON-LD schema directly in your theme + include the $29 Kit.",
+          cta: "Book 48h Rescue ($199) \u2192",
+          url: "https://buy.stripe.com/bJe5kC2VlbtHgTIbbIcs81m",
+        },
+        "apps:dfy": {
+          title: "Done-For-You 48h Website Speed, CRO & SEO Rescue ($199)",
+          desc: "Full theme cleanup + installation of native shipping bar, sticky ATC, and quiz without monthly app fees.",
+          cta: "Book 48h Rescue ($199) \u2192",
+          url: "https://buy.stripe.com/bJe5kC2VlbtHgTIbbIcs81m",
+        },
+        "full:dfy": {
+          title: "Done-For-You 48h Website Speed, CRO & SEO Rescue ($199)",
+          desc: "Full implementation + before/after Playwright verification across desktop and 390px mobile viewports.",
+          cta: "Book 48h Rescue ($199) \u2192",
+          url: "https://buy.stripe.com/bJe5kC2VlbtHgTIbbIcs81m",
+        },
+      };
+      function renderQuizRec() {
+        const rec = RECS[quizPain + ":" + quizMode] || RECS["schema:diy"];
+        const t = document.getElementById("quiz-rec-title");
+        const d = document.getElementById("quiz-rec-desc");
+        const a = document.getElementById("quiz-rec-cta");
+        if (t) t.textContent = rec.title;
+        if (d) d.textContent = rec.desc;
+        if (a) { a.textContent = rec.cta; a.href = rec.url; }
+      }
+      document.getElementById("quiz-pain-chips")?.addEventListener("click", function (e) {
+        const b = e.target.closest("button[data-pain]");
+        if (!b) return;
+        quizPain = b.getAttribute("data-pain");
+        this.querySelectorAll("button").forEach((el) => el.classList.toggle("is-selected", el === b));
+        renderQuizRec();
+      });
+      document.getElementById("quiz-mode-chips")?.addEventListener("click", function (e) {
+        const b = e.target.closest("button[data-mode]");
+        if (!b) return;
+        quizMode = b.getAttribute("data-mode");
+        this.querySelectorAll("button").forEach((el) => el.classList.toggle("is-selected", el === b));
+        renderQuizRec();
+      });
     })();
   </script>
 </body>
