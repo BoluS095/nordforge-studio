@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Black Friday 2026 Shopify Speed &amp; CRO Benchmark (50 Live Stores Audited) | NordForge AI Studio</title>
-  <meta name="description" content="Real headless Chromium telemetry across 50 live Shopify &amp; DTC stores before Black Friday 2026: script bloat, DOM timings, broken images, missing JSON-LD schemas, and free copy-paste Liquid/CSS patches." />
+  <title>Black Friday 2026 Shopify Speed &amp; CRO Benchmark (66 Live Stores Audited) | NordForge AI Studio</title>
+  <meta name="description" content="Real headless Chromium telemetry across 66 live Shopify &amp; DTC stores before Black Friday 2026: script bloat, DOM timings, broken images, missing JSON-LD schemas, and free copy-paste Liquid/CSS patches." />
   <link rel="canonical" href="https://bolus095.github.io/nordforge-studio/black-friday-shopify-speed-report-2026.html" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -16,29 +16,29 @@
     </div>
 
     <div class="bfcm-alert">
-      <strong>Live Pre-Black-Friday Field Data (50 Real Storefronts):</strong> Every metric below was measured directly in headless Chromium (1440&times;900 desktop &amp; 390&times;844 mobile) using our open-source Playwright auditor. Zero synthetic estimates.
+      <strong>Live Pre-Black-Friday Field Data (66 Real Storefronts):</strong> Every metric below was measured directly in headless Chromium (1440&times;900 desktop &amp; 390&times;844 mobile) using our open-source Playwright auditor. Zero synthetic estimates.
     </div>
 
-    <h1 class="audit-title">We Audited 50 Live Shopify &amp; DTC Stores Before Black Friday 2026 &mdash; Here Is What Is Silently Killing Mobile Conversion</h1>
+    <h1 class="audit-title">We Audited 66 Live Shopify &amp; DTC Stores Before Black Friday 2026 &mdash; Here Is What Is Silently Killing Mobile Conversion</h1>
     <p class="audit-subtitle">Reproduce every test on your own store for free with our MIT CLI: <a href="https://github.com/BoluS095/shopify-speed-bloat-auditor" target="_blank" rel="noopener">github.com/BoluS095/shopify-speed-bloat-auditor</a></p>
 
     <div class="audit-stats-grid">
-      <div class="audit-stat"><div class="audit-stat-k">Live Stores Audited</div><div class="audit-stat-v">50</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Avg. External Scripts</div><div class="audit-stat-v">43.0 (max 123)</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">35+ External Scripts</div><div class="audit-stat-v">62% (31/50)</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Avg. DOM Load</div><div class="audit-stat-v">2084 ms (max 8444)</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">0 JSON-LD Schemas</div><div class="audit-stat-v">26% (13/50)</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Broken DOM Images</div><div class="audit-stat-v">18% (9/50)</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">390px Mobile Overflow</div><div class="audit-stat-v">3 stores</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Live Stores Audited</div><div class="audit-stat-v">66</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Avg. External Scripts</div><div class="audit-stat-v">44.2 (max 123)</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">35+ External Scripts</div><div class="audit-stat-v">64% (42/66)</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Avg. DOM Load</div><div class="audit-stat-v">2422 ms (max 9846)</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">0 JSON-LD Schemas</div><div class="audit-stat-v">26% (17/66)</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Broken DOM Images</div><div class="audit-stat-v">17% (11/66)</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">390px Mobile Overflow</div><div class="audit-stat-v">4 stores</div></div>
       <div class="audit-stat"><div class="audit-stat-k">Methodology</div><div class="audit-stat-v">Real Chromium</div></div>
     </div>
 
     <div class="audit-card">
       <h2 class="audit-card-title">1. The 3 Highest-Impact Fixes You Can Apply in 15 Minutes (Free)</h2>
       <ol class="audit-findings-list">
-        <li><strong>Remove Orphaned App Embeds in <code>theme.liquid</code>:</strong> 62% of stores load 35+ external scripts. Uninstalling a Shopify app from Admin does <em>not</em> always remove its legacy <code>&lt;script&gt;</code> tags from your theme files.</li>
+        <li><strong>Remove Orphaned App Embeds in <code>theme.liquid</code>:</strong> 64% of stores load 35+ external scripts. Uninstalling a Shopify app from Admin does <em>not</em> always remove its legacy <code>&lt;script&gt;</code> tags from your theme files.</li>
         <li><strong>Fix Missing Organization/Product JSON-LD Schema:</strong> 26% of audited storefronts expose zero <code>application/ld+json</code> tags on entry, hurting Google Shopping rich price/stock snippets during Black Friday search spikes.</li>
-        <li><strong>Lock Mobile 390px Horizontal Overflow &amp; Broken Media:</strong> 18% of stores rendered broken <code>&lt;img&gt;</code> tags (<code>naturalWidth === 0</code>). Adding <code>html, body { max-width: 100%; overflow-x: clip; }</code> prevents horizontal jitter on iOS/Android checkout scrolls.</li>
+        <li><strong>Lock Mobile 390px Horizontal Overflow &amp; Broken Media:</strong> 17% of stores rendered broken <code>&lt;img&gt;</code> tags (<code>naturalWidth === 0</code>). Adding <code>html, body { max-width: 100%; overflow-x: clip; }</code> prevents horizontal jitter on iOS/Android checkout scrolls.</li>
       </ol>
       <pre class="code-preview"><code>/* Free Copy-Paste Mobile Overflow &amp; CLS Safety Patch */
 html, body { max-width: 100%; overflow-x: clip; }
@@ -94,11 +94,51 @@ img { max-width: 100%; height: auto; }</code></pre>
             <td>0 px</td>
           </tr>
           <tr>
+            <td><a href="audits/off-record-com.html">off---record.com</a></td>
+            <td>Shopify</td>
+            <td><strong>90</strong></td>
+            <td>2057 ms</td>
+            <td>3 422 KB</td>
+            <td>4</td>
+            <td>0</td>
+            <td>0 px</td>
+          </tr>
+          <tr>
+            <td><a href="audits/burstaots-com.html">burstaots.com</a></td>
+            <td>Shopify</td>
+            <td><strong>75</strong></td>
+            <td>9846 ms</td>
+            <td>3 243 KB</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0 px</td>
+          </tr>
+          <tr>
+            <td><a href="audits/mightytiga-com-au.html">mightytiga.com.au</a></td>
+            <td>Shopify</td>
+            <td><strong>71</strong></td>
+            <td>1685 ms</td>
+            <td>28 039 KB</td>
+            <td>3</td>
+            <td>2</td>
+            <td>0 px</td>
+          </tr>
+          <tr>
             <td><a href="audits/kaffebox-no.html">kaffebox.no</a></td>
             <td>Web/DTC</td>
             <td><strong>70</strong></td>
             <td>1516 ms</td>
             <td>3 319 KB</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0 px</td>
+          </tr>
+          <tr>
+            <td><a href="audits/gemdrop-io.html">gemdrop.io</a></td>
+            <td>Shopify</td>
+            <td><strong>70</strong></td>
+            <td>3698 ms</td>
+            <td>3 092 KB</td>
             <td>1</td>
             <td>0</td>
             <td>0 px</td>
@@ -120,6 +160,16 @@ img { max-width: 100%; height: auto; }</code></pre>
             <td>1704 ms</td>
             <td>2 404 KB</td>
             <td>1</td>
+            <td>0</td>
+            <td>0 px</td>
+          </tr>
+          <tr>
+            <td><a href="audits/mindfulpups-shop.html">mindfulpups.shop</a></td>
+            <td>Shopify</td>
+            <td><strong>67</strong></td>
+            <td>2714 ms</td>
+            <td>3 037 KB</td>
+            <td>4</td>
             <td>0</td>
             <td>0 px</td>
           </tr>
@@ -184,6 +234,16 @@ img { max-width: 100%; height: auto; }</code></pre>
             <td>0 px</td>
           </tr>
           <tr>
+            <td><a href="audits/rowsomeleather-com.html">rowsomeleather.com</a></td>
+            <td>Shopify</td>
+            <td><strong>62</strong></td>
+            <td>5550 ms</td>
+            <td>8 032 KB</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0 px</td>
+          </tr>
+          <tr>
             <td><a href="audits/wildone-com.html">wildone.com</a></td>
             <td>Shopify</td>
             <td><strong>61</strong></td>
@@ -200,66 +260,6 @@ img { max-width: 100%; height: auto; }</code></pre>
             <td>6068 ms</td>
             <td>17 165 KB</td>
             <td>2</td>
-            <td>0</td>
-            <td>0 px</td>
-          </tr>
-          <tr>
-            <td><a href="audits/florworks-no.html">florworks.no</a></td>
-            <td>Shopify</td>
-            <td><strong>59</strong></td>
-            <td>8444 ms</td>
-            <td>7 198 KB</td>
-            <td>5</td>
-            <td>24</td>
-            <td>0 px</td>
-          </tr>
-          <tr>
-            <td><a href="audits/hufs-no.html">hufs.no</a></td>
-            <td>Shopify</td>
-            <td><strong>56</strong></td>
-            <td>2175 ms</td>
-            <td>3 852 KB</td>
-            <td>2</td>
-            <td>0</td>
-            <td>0 px</td>
-          </tr>
-          <tr>
-            <td><a href="audits/scandinavianbiolabs-com.html">scandinavianbiolabs.com</a></td>
-            <td>Shopify</td>
-            <td><strong>53</strong></td>
-            <td>4132 ms</td>
-            <td>4 848 KB</td>
-            <td>1</td>
-            <td>0</td>
-            <td>0 px</td>
-          </tr>
-          <tr>
-            <td><a href="audits/amundsensports-com.html">amundsensports.com</a></td>
-            <td>Web/DTC</td>
-            <td><strong>49</strong></td>
-            <td>2343 ms</td>
-            <td>6 096 KB</td>
-            <td>1</td>
-            <td>0</td>
-            <td>0 px</td>
-          </tr>
-          <tr>
-            <td><a href="audits/flybyjing-com.html">flybyjing.com</a></td>
-            <td>Shopify</td>
-            <td><strong>47</strong></td>
-            <td>2511 ms</td>
-            <td>5 451 KB</td>
-            <td>2</td>
-            <td>0</td>
-            <td>0 px</td>
-          </tr>
-          <tr>
-            <td><a href="audits/onyxcoffeelab-com.html">onyxcoffeelab.com</a></td>
-            <td>Shopify</td>
-            <td><strong>44</strong></td>
-            <td>1879 ms</td>
-            <td>46 234 KB</td>
-            <td>0</td>
             <td>0</td>
             <td>0 px</td>
           </tr>

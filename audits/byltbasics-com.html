@@ -15,17 +15,17 @@
     </div>
 
     <div class="bfcm-alert">
-      <strong>Peak-Traffic Readiness Alert:</strong> Flagged on <code>byltbasics.com</code> &mdash; 2124ms DOM load. Fix these leaks before peak holiday traffic hits mobile checkout.
+      <strong>Peak-Traffic Readiness Alert:</strong> Flagged on <code>byltbasics.com</code> &mdash; 24 scripts • 1962ms DOM load. Fix these leaks before peak holiday traffic hits mobile checkout.
     </div>
 
     <h1 class="audit-title">Forensic Conversion &amp; Speed Audit: byltbasics.com</h1>
-    <p class="audit-subtitle">Target URL: <a href="https://byltbasics.com/" target="_blank" rel="noopener">https://byltbasics.com/</a> &bull; HTTP 200 &bull; Readiness Score: <strong class="audit-score">81/100</strong></p>
+    <p class="audit-subtitle">Target URL: <a href="https://byltbasics.com/" target="_blank" rel="noopener">https://byltbasics.com/</a> &bull; HTTP 200 &bull; Readiness Score: <strong class="audit-score">80/100</strong></p>
 
     <div class="audit-stats-grid">
-      <div class="audit-stat"><div class="audit-stat-k">DOM Content Loaded</div><div class="audit-stat-v">2124 ms</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">External Scripts</div><div class="audit-stat-v">22</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">3rd-Party Hosts</div><div class="audit-stat-v">37</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Measured Payload</div><div class="audit-stat-v">59309 KB</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">DOM Content Loaded</div><div class="audit-stat-v">1962 ms</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">External Scripts</div><div class="audit-stat-v">24</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">3rd-Party Hosts</div><div class="audit-stat-v">42</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Measured Payload</div><div class="audit-stat-v">41466 KB</div></div>
       <div class="audit-stat"><div class="audit-stat-k">JSON-LD Schemas</div><div class="audit-stat-v">2</div></div>
       <div class="audit-stat"><div class="audit-stat-k">Broken / No-Alt Imgs</div><div class="audit-stat-v">0 / 7</div></div>
       <div class="audit-stat"><div class="audit-stat-k">Mobile Overflow (390px)</div><div class="audit-stat-v">0 px</div></div>
@@ -35,11 +35,11 @@
     <div class="audit-card">
       <h2 class="audit-card-title">Top 3 Verified Findings (Measured in Chromium)</h2>
       <ol class="audit-findings-list">
-        <li>Script &amp; Third-Party Bloat: Measured 22 external scripts across 37 third-party domains (59309 KB transferred), extending DOM load to 2124 ms.</li>
+        <li>Script &amp; Third-Party Bloat: Measured 24 external scripts across 42 third-party domains (41466 KB transferred), extending DOM load to 1962 ms.</li>
         <li>Media &amp; Accessibility Gaps: 0 broken image(s) (naturalWidth=0) and 7 image(s) without descriptive alt text detected across 16 DOM images.</li>
-        <li>Render Timing Opportunity: TTFB measured at 1256 ms with 2124 ms full load; deferring non-critical embeds and hardening canonical/schema tags reduces checkout drop-off.</li>
+        <li>Render Timing Opportunity: TTFB measured at 1349 ms with 1962 ms full load; deferring non-critical embeds and hardening canonical/schema tags reduces checkout drop-off.</li>
       </ol>
-      <p class="audit-quickwin"><strong>Fastest Engineering Win:</strong> Defer or inline config.gorgias.chat and verify Product/Organization JSON-LD + image alt tags.</p>
+      <p class="audit-quickwin"><strong>Fastest Engineering Win:</strong> Defer or inline config.gorgias.chat, assets.gorgias.chat and verify Product/Organization JSON-LD + image alt tags.</p>
     </div>
 
     <div class="audit-card">
@@ -47,7 +47,7 @@
       <p class="audit-quickwin">Apply this verified snippet right away &mdash; zero strings attached:</p>
       <pre class="code-preview"><code>/* Free Instant Fix #1 for byltbasics.com: Safe image &amp; CLS guard */
 img { max-width: 100%; height: auto; }
-/* Audit heavy scripts (22 detected) and move non-critical embeds to defer */</code></pre>
+/* Audit heavy scripts (24 detected) and move non-critical embeds to defer */</code></pre>
     </div>
 
     <div class="audit-card">
