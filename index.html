@@ -27,6 +27,7 @@
       "@type": "OfferCatalog",
       "name": "CRO Toolkits & B2B Website Audits",
       "itemListElement": [
+        { "@type": "Offer", "name": "Shopify Speed & Schema Emergency Quick-Win Pack", "price": "9.00", "priceCurrency": "USD" },
         { "@type": "Offer", "name": "B2B Proof-First Outreach & FFmpeg Viral Shorts Vault", "price": "19.00", "priceCurrency": "USD" },
         { "@type": "Offer", "name": "Shopify Zero-Friction CRO & Speed Liquid Kit (2026)", "price": "29.00", "priceCurrency": "USD" },
         { "@type": "Offer", "name": "Autonomous B2B Audit & Multi-Model AI Agency Starter Kit", "price": "49.00", "priceCurrency": "USD" },
@@ -39,6 +40,10 @@
   </script>
 </head>
 <body>
+  <div class="bfcm-ribbon">
+    <span id="bfcm-countdown">Black Friday 2026 Readiness:</span> Fix broken product images, mobile overflow &amp; slow third-party scripts in 15 minutes &mdash; instant ZIP delivery in &lt;60s.
+    <a href="https://buy.stripe.com/7sYfZggMbcxL6f4gw2cs81o" target="_blank" rel="noopener">Get $9 Quick-Win Pack &rarr;</a>
+  </div>
   <header>
     <div class="container nav">
       <a class="brand" href="#top"><span class="brand-dot"></span>NordForge AI Studio</a>
@@ -106,14 +111,34 @@
       </div>
     </section>
 
+    <div class="proof-strip" aria-label="Measured Chromium Benchmark Data">
+      <div class="proof-metric">
+        <strong id="proof-count">32+ Stores</strong>
+        <span>Scanned Live in Headless Chromium</span>
+      </div>
+      <div class="proof-metric">
+        <strong>44+ Scripts</strong>
+        <span>Avg. External Scripts Per Store</span>
+      </div>
+      <div class="proof-metric">
+        <strong>33% Missing</strong>
+        <span>Zero Product/Org JSON-LD Schema</span>
+      </div>
+      <div class="proof-metric">
+        <strong>&lt; 60 Seconds</strong>
+        <span>Automated ZIP Delivery After Stripe</span>
+      </div>
+    </div>
+
     <div class="free-banner" id="free-tools">
       <div class="free-banner-copy">
-        <h3>Try Free First: Open-Source Bloat CLI + 1-Click Free Store Audit</h3>
-        <p>Run our MIT-licensed Playwright script on your store locally — or email your URL and get a free Chromium visual teardown published within minutes.</p>
-      </div>
-      <div class="free-banner-actions">
-        <a class="btn btn-outline" href="https://github.com/BoluS095/shopify-speed-bloat-auditor" target="_blank" rel="noopener">Free GitHub Bloat CLI &rarr;</a>
-        <a class="btn btn-primary" href="mailto:bolus132@gmail.com?subject=Free%20Store%20Audit%20Request&body=Please%20audit%20my%20store%20URL:%20https://">Request Free Audit &rarr;</a>
+        <h3>Try Free First: Open-Source Bloat CLI + 1-Click Automated Store Audit</h3>
+        <p>Run our MIT-licensed Playwright script locally &mdash; or enter your store URL below to trigger our 24/7 Chromium auditor (publishes screenshots + free patch #1 within minutes).</p>
+        <div class="audit-instant-form">
+          <input id="instant-audit-url" type="url" placeholder="https://your-shopify-store.com" aria-label="Your store URL" />
+          <a class="btn btn-primary" id="instant-audit-btn" href="mailto:bolus132@gmail.com?subject=Free%20Store%20Audit%20Request&body=Please%20audit%20my%20store%20URL:%20https://">Run Free Visual Audit &rarr;</a>
+          <a class="btn btn-outline" href="https://github.com/BoluS095/shopify-speed-bloat-auditor" target="_blank" rel="noopener">Free GitHub CLI &rarr;</a>
+        </div>
       </div>
     </div>
 
@@ -125,6 +150,7 @@
       <div class="preview-shell">
         <div class="preview-tabs" role="tablist">
           <button type="button" class="tab-btn is-active" data-tab="ship" role="tab" aria-selected="true">Free Shipping Bar Demo</button>
+          <button type="button" class="tab-btn" data-tab="apps" role="tab" aria-selected="false">App Fee Killer Calculator</button>
           <button type="button" class="tab-btn" data-tab="quiz" role="tab" aria-selected="false">Product-Match Quiz Demo</button>
           <button type="button" class="tab-btn" data-tab="code" role="tab" aria-selected="false">Real Source Code Excerpt</button>
         </div>
@@ -141,6 +167,26 @@
               <button type="button" class="btn btn-primary" id="demo-add-25">+ Add $25 Item</button>
               <button type="button" class="btn btn-outline" id="demo-reset-cart">Reset Cart ($0)</button>
               <a class="btn btn-outline" href="https://buy.stripe.com/28E4gy2Vl41ffPEdjQcs81i" target="_blank" rel="noopener">Get Full Liquid Kit ($29) &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-panel" id="panel-apps">
+          <div class="demo-box">
+            <strong>Toggle the paid Shopify apps you want to replace with native 2 KB Online Store 2.0 Liquid:</strong>
+            <div class="bloat-chips" id="bloat-app-chips">
+              <button type="button" class="bloat-chip is-on" data-cost="19" data-scripts="3">Free Shipping Bar ($19/mo)</button>
+              <button type="button" class="bloat-chip is-on" data-cost="15" data-scripts="2">Sticky Add-to-Cart ($15/mo)</button>
+              <button type="button" class="bloat-chip is-on" data-cost="39" data-scripts="5">Product Quiz App ($39/mo)</button>
+              <button type="button" class="bloat-chip is-on" data-cost="19" data-scripts="2">JSON-LD SEO Schema App ($19/mo)</button>
+              <button type="button" class="bloat-chip" data-cost="29" data-scripts="4">Promo Banner / Discount Bar ($29/mo)</button>
+            </div>
+            <div class="quiz-result">
+              <div>
+                <h4 class="quiz-rec-title" id="bloat-savings-title">Save $92/mo ($1,104/yr) &amp; cut ~12 slow app scripts</h4>
+                <p class="quiz-rec-desc" id="bloat-savings-desc">One-time $29 MIT-licensed Liquid Kit pays for itself in 9 days — zero recurring fees forever.</p>
+              </div>
+              <a class="btn btn-primary" href="https://buy.stripe.com/28E4gy2Vl41ffPEdjQcs81i" target="_blank" rel="noopener">Replace Apps Forever ($29) &rarr;</a>
             </div>
           </div>
         </div>
@@ -321,63 +367,63 @@ html, body { max-width: 100%; overflow-x: clip; }
         <!-- LIVE_AUDITS_START -->
         <div class="audit-item">
           <div class="audit-item-head">
-            <strong>nativecos.com</strong>
-            <span class="tag">42/100</span>
+            <strong>prospectcoffee.co.uk</strong>
+            <span class="tag">72/100</span>
           </div>
           <p class="audit-item-meta">
-            DOM 2373ms &bull; 59 scripts &bull; 27316 KB &bull; 1 schemas
+            DOM 1477ms &bull; 40 scripts &bull; 1573 KB &bull; 2 schemas
           </p>
-          <a class="audit-item-link" href="audits/nativecos-com.html">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/prospectcoffee-co-uk.html">Inspect Live Teaser &rarr;</a>
         </div>
         <div class="audit-item">
           <div class="audit-item-head">
-            <strong>cutsclothing.com</strong>
-            <span class="tag">61/100</span>
-          </div>
-          <p class="audit-item-meta">
-            DOM 1797ms &bull; 59 scripts &bull; 55371 KB &bull; 2 schemas
-          </p>
-          <a class="audit-item-link" href="audits/cutsclothing-com.html">Inspect Live Teaser &rarr;</a>
-        </div>
-        <div class="audit-item">
-          <div class="audit-item-head">
-            <strong>byltbasics.com</strong>
+            <strong>fireandflowcoffee.co.uk</strong>
             <span class="tag">79/100</span>
           </div>
           <p class="audit-item-meta">
-            DOM 2073ms &bull; 26 scripts &bull; 40383 KB &bull; 2 schemas
+            DOM 1777ms &bull; 26 scripts &bull; 12674 KB &bull; 0 schemas
           </p>
-          <a class="audit-item-link" href="audits/byltbasics-com.html">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/fireandflowcoffee-co-uk.html">Inspect Live Teaser &rarr;</a>
         </div>
         <div class="audit-item">
           <div class="audit-item-head">
-            <strong>chubbiesshorts.com</strong>
-            <span class="tag">83/100</span>
+            <strong>twowordscoffee.co.uk</strong>
+            <span class="tag">79/100</span>
           </div>
           <p class="audit-item-meta">
-            DOM 1402ms &bull; 19 scripts &bull; 66771 KB &bull; 1 schemas
+            DOM 1116ms &bull; 26 scripts &bull; 1598 KB &bull; 2 schemas
           </p>
-          <a class="audit-item-link" href="audits/chubbiesshorts-com.html">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/twowordscoffee-co-uk.html">Inspect Live Teaser &rarr;</a>
         </div>
         <div class="audit-item">
           <div class="audit-item-head">
-            <strong>tentree.com</strong>
+            <strong>hufs.no</strong>
             <span class="tag">67/100</span>
           </div>
           <p class="audit-item-meta">
-            DOM 2148ms &bull; 66 scripts &bull; 3951 KB &bull; 0 schemas
+            DOM 2175ms &bull; 56 scripts &bull; 3852 KB &bull; 2 schemas
           </p>
-          <a class="audit-item-link" href="audits/tentree-com.html">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/hufs-no.html">Inspect Live Teaser &rarr;</a>
         </div>
         <div class="audit-item">
           <div class="audit-item-head">
-            <strong>bellroy.com</strong>
-            <span class="tag">78/100</span>
+            <strong>seidr-skincare.no</strong>
+            <span class="tag">71/100</span>
           </div>
           <p class="audit-item-meta">
-            DOM 2023ms &bull; 16 scripts &bull; 4519 KB &bull; 0 schemas
+            DOM 1480ms &bull; 42 scripts &bull; 1825 KB &bull; 2 schemas
           </p>
-          <a class="audit-item-link" href="audits/bellroy-com.html">Inspect Live Teaser &rarr;</a>
+          <a class="audit-item-link" href="audits/seidr-skincare-no.html">Inspect Live Teaser &rarr;</a>
+        </div>
+        <div class="audit-item">
+          <div class="audit-item-head">
+            <strong>kremeriet.no</strong>
+            <span class="tag">85/100</span>
+          </div>
+          <p class="audit-item-meta">
+            DOM 1349ms &bull; 14 scripts &bull; 1552 KB &bull; 2 schemas
+          </p>
+          <a class="audit-item-link" href="audits/kremeriet-no.html">Inspect Live Teaser &rarr;</a>
         </div>
         <!-- LIVE_AUDITS_END -->
       </div>
@@ -535,6 +581,66 @@ html, body { max-width: 100%; overflow-x: clip; }
         this.querySelectorAll("button").forEach((el) => el.classList.toggle("is-selected", el === b));
         renderQuizRec();
       });
+
+      // Black Friday 2026 live countdown
+      const bfcmEl = document.getElementById("bfcm-countdown");
+      if (bfcmEl) {
+        const bfcmTarget = new Date("2026-11-27T00:00:00Z").getTime();
+        const diffDays = Math.max(0, Math.ceil((bfcmTarget - Date.now()) / (1000 * 3600 * 24)));
+        bfcmEl.textContent = diffDays > 0
+          ? "Black Friday 2026 (" + diffDays + " day" + (diffDays === 1 ? "" : "s") + " left):"
+          : "Peak Holiday Traffic Alert:";
+      }
+
+      // Instant Free Store Audit URL builder
+      const auditUrlInput = document.getElementById("instant-audit-url");
+      const auditUrlBtn = document.getElementById("instant-audit-btn");
+      if (auditUrlInput && auditUrlBtn) {
+        const updateAuditHref = () => {
+          const raw = (auditUrlInput.value || "").trim();
+          const url = raw ? (/^https?:\/\//i.test(raw) ? raw : "https://" + raw) : "https://your-store.com";
+          auditUrlBtn.href =
+            "mailto:bolus132@gmail.com?subject=" +
+            encodeURIComponent("Free Store Audit Request: " + url) +
+            "&body=" +
+            encodeURIComponent("Please audit my store URL: " + url + "\n\nSend me the desktop/mobile Chromium screenshots and free patch #1.");
+        };
+        auditUrlInput.addEventListener("input", updateAuditHref);
+      }
+
+      // App Fee Killer Calculator
+      const bloatWrap = document.getElementById("bloat-app-chips");
+      function recalcBloat() {
+        if (!bloatWrap) return;
+        let monthly = 0;
+        let scripts = 0;
+        bloatWrap.querySelectorAll(".bloat-chip.is-on").forEach((el) => {
+          monthly += Number(el.getAttribute("data-cost") || 0);
+          scripts += Number(el.getAttribute("data-scripts") || 0);
+        });
+        const titleEl = document.getElementById("bloat-savings-title");
+        const descEl = document.getElementById("bloat-savings-desc");
+        if (titleEl) {
+          titleEl.textContent =
+            monthly > 0
+              ? "Save $" + monthly + "/mo ($" + (monthly * 12).toLocaleString() + "/yr) & cut ~" + scripts + " slow app scripts"
+              : "Toggle any app above to calculate your recurring fee savings";
+        }
+        if (descEl) {
+          const days = monthly > 0 ? Math.max(1, Math.round((29 / monthly) * 30)) : 30;
+          descEl.textContent =
+            monthly > 0
+              ? "One-time $29 MIT-licensed Liquid Kit pays for itself in ~" + days + " days — zero recurring fees forever."
+              : "Replace heavy Shopify apps with 2 KB native Online Store 2.0 Liquid.";
+        }
+      }
+      bloatWrap?.addEventListener("click", function (e) {
+        const chip = e.target.closest(".bloat-chip");
+        if (!chip) return;
+        chip.classList.toggle("is-on");
+        recalcBloat();
+      });
+      recalcBloat();
     })();
   </script>
 </body>

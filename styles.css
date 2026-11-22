@@ -818,3 +818,103 @@ body.audit-page {
   border: 1px solid #2b4263;
   color: #e6edf7;
 }
+
+.bfcm-ribbon {
+  background: linear-gradient(90deg, #0b243b, #0e382b, #0b243b);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.35);
+  color: #e6f7f1;
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  text-align: center;
+}
+
+.bfcm-ribbon a {
+  color: #38bdf8;
+  text-decoration: underline;
+  margin-left: 8px;
+  font-weight: 700;
+}
+
+.bfcm-alert {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #fde68a;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  font-size: 0.92rem;
+}
+
+.proof-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 26px 0 10px;
+}
+
+@media (max-width: 820px) {
+  .proof-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.proof-metric {
+  background: #0e1523;
+  border: 1px solid #1e2d45;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.proof-metric strong {
+  display: block;
+  font-size: 1.45rem;
+  color: #38bdf8;
+  line-height: 1.15;
+}
+
+.proof-metric span {
+  font-size: 0.8rem;
+  color: #93a4bd;
+}
+
+.bloat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 14px;
+}
+
+.bloat-chip {
+  background: #0b1322;
+  border: 1px solid #253a57;
+  color: #cbd5e1;
+  border-radius: 999px;
+  padding: 7px 13px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bloat-chip.is-on {
+  background: rgba(16, 185, 129, 0.16);
+  border-color: #10b981;
+  color: #6ee7b7;
+}
+
+.audit-instant-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.audit-instant-form input {
+  flex: 1 1 240px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid #2b4263;
+  background: #09111f;
+  color: #f8fafc;
+  font-size: 0.92rem;
+}
