@@ -15,19 +15,19 @@
     </div>
 
     <div class="bfcm-alert">
-      <strong>Peak-Traffic Readiness Alert:</strong> Flagged on <code>chubbiesshorts.com</code> &mdash; 10 scripts • 1398ms DOM load. Fix these leaks before peak holiday traffic hits mobile checkout.
+      <strong>Peak-Traffic Readiness Alert:</strong> Flagged on <code>chubbiesshorts.com</code> &mdash; 13 scripts • 1141ms DOM load. Fix these leaks before peak holiday traffic hits mobile checkout.
     </div>
 
     <h1 class="audit-title">Forensic Conversion &amp; Speed Audit: chubbiesshorts.com</h1>
-    <p class="audit-subtitle">Target URL: <a href="https://www.chubbiesshorts.com/" target="_blank" rel="noopener">https://www.chubbiesshorts.com/</a> &bull; HTTP 200 &bull; Readiness Score: <strong class="audit-score">87/100</strong></p>
+    <p class="audit-subtitle">Target URL: <a href="https://www.chubbiesshorts.com/" target="_blank" rel="noopener">https://www.chubbiesshorts.com/</a> &bull; HTTP 200 &bull; Readiness Score: <strong class="audit-score">86/100</strong></p>
 
     <div class="audit-stats-grid">
-      <div class="audit-stat"><div class="audit-stat-k">DOM Content Loaded</div><div class="audit-stat-v">1398 ms</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">External Scripts</div><div class="audit-stat-v">10</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">DOM Content Loaded</div><div class="audit-stat-v">1141 ms</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">External Scripts</div><div class="audit-stat-v">13</div></div>
       <div class="audit-stat"><div class="audit-stat-k">3rd-Party Hosts</div><div class="audit-stat-v">15</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Measured Payload</div><div class="audit-stat-v">53895 KB</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Measured Payload</div><div class="audit-stat-v">54682 KB</div></div>
       <div class="audit-stat"><div class="audit-stat-k">JSON-LD Schemas</div><div class="audit-stat-v">1</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Broken / No-Alt Imgs</div><div class="audit-stat-v">0 / 17</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Broken / No-Alt Imgs</div><div class="audit-stat-v">0 / 22</div></div>
       <div class="audit-stat"><div class="audit-stat-k">Mobile Overflow (390px)</div><div class="audit-stat-v">0 px</div></div>
       <div class="audit-stat"><div class="audit-stat-k">Stack Detected</div><div class="audit-stat-v">Shopify</div></div>
     </div>
@@ -35,9 +35,9 @@
     <div class="audit-card">
       <h2 class="audit-card-title">Top 3 Verified Findings (Measured in Chromium)</h2>
       <ol class="audit-findings-list">
-        <li>Script &amp; Third-Party Bloat: Measured 10 external scripts across 15 third-party domains (53895 KB transferred), extending DOM load to 1398 ms.</li>
-        <li>Media &amp; Accessibility Gaps: 0 broken image(s) (naturalWidth=0) and 17 image(s) without descriptive alt text detected across 37 DOM images.</li>
-        <li>Render Timing Opportunity: TTFB measured at 547 ms with 1900 ms full load; deferring non-critical embeds and hardening canonical/schema tags reduces checkout drop-off.</li>
+        <li>Script &amp; Third-Party Bloat: Measured 13 external scripts across 15 third-party domains (54682 KB transferred), extending DOM load to 1141 ms.</li>
+        <li>Media &amp; Accessibility Gaps: 0 broken image(s) (naturalWidth=0) and 22 image(s) without descriptive alt text detected across 43 DOM images.</li>
+        <li>Render Timing Opportunity: TTFB measured at 497 ms with 1550 ms full load; deferring non-critical embeds and hardening canonical/schema tags reduces checkout drop-off.</li>
       </ol>
       <p class="audit-quickwin"><strong>Fastest Engineering Win:</strong> Defer or inline non-critical third-party scripts and verify Product/Organization JSON-LD + image alt tags.</p>
     </div>
@@ -47,7 +47,7 @@
       <p class="audit-quickwin">Apply this verified snippet right away &mdash; zero strings attached:</p>
       <pre class="code-preview"><code>/* Free Instant Fix #1 for chubbiesshorts.com: Safe image &amp; CLS guard */
 img { max-width: 100%; height: auto; }
-/* Audit heavy scripts (10 detected) and move non-critical embeds to defer */</code></pre>
+/* Audit heavy scripts (13 detected) and move non-critical embeds to defer */</code></pre>
     </div>
 
     <div class="audit-card">
