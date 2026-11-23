@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Black Friday 2026 Shopify Speed &amp; CRO Benchmark (101 Live Stores Audited) | NordForge AI Studio</title>
-  <meta name="description" content="Real headless Chromium telemetry across 101 live Shopify &amp; DTC stores before Black Friday 2026: script bloat, DOM timings, broken images, missing JSON-LD schemas, and free copy-paste Liquid/CSS patches." />
+  <title>Black Friday 2026 Shopify Speed &amp; CRO Benchmark (145 Live Stores Audited) | NordForge AI Studio</title>
+  <meta name="description" content="Real headless Chromium telemetry across 145 live Shopify &amp; DTC stores before Black Friday 2026: script bloat, DOM timings, broken images, missing JSON-LD schemas, and free copy-paste Liquid/CSS patches." />
   <link rel="canonical" href="https://bolus095.github.io/nordforge-studio/black-friday-shopify-speed-report-2026.html" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -12,33 +12,33 @@
   <div class="audit-wrap">
     <div class="audit-nav">
       <a class="audit-brand-link" href="index.html">&larr; NordForge AI Studio</a>
-      <span class="audit-badge">Open Engineering Benchmark &bull; 2026-11-22</span>
+      <span class="audit-badge">Open Engineering Benchmark &bull; 2026-11-23</span>
     </div>
 
     <div class="bfcm-alert">
-      <strong>Live Pre-Black-Friday Field Data (101 Real Storefronts):</strong> Every metric below was measured directly in headless Chromium (1440&times;900 desktop &amp; 390&times;844 mobile) using our open-source Playwright auditor. Zero synthetic estimates.
+      <strong>Live Pre-Black-Friday Field Data (145 Real Storefronts):</strong> Every metric below was measured directly in headless Chromium (1440&times;900 desktop &amp; 390&times;844 mobile) using our open-source Playwright auditor. Zero synthetic estimates.
     </div>
 
-    <h1 class="audit-title">We Audited 101 Live Shopify &amp; DTC Stores Before Black Friday 2026 &mdash; Here Is What Is Silently Killing Mobile Conversion</h1>
+    <h1 class="audit-title">We Audited 145 Live Shopify &amp; DTC Stores Before Black Friday 2026 &mdash; Here Is What Is Silently Killing Mobile Conversion</h1>
     <p class="audit-subtitle">Reproduce every test on your own store for free with our MIT CLI: <a href="https://github.com/BoluS095/shopify-speed-bloat-auditor" target="_blank" rel="noopener">github.com/BoluS095/shopify-speed-bloat-auditor</a></p>
 
     <div class="audit-stats-grid">
-      <div class="audit-stat"><div class="audit-stat-k">Live Stores Audited</div><div class="audit-stat-v">101</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Avg. External Scripts</div><div class="audit-stat-v">44.9 (max 123)</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">35+ External Scripts</div><div class="audit-stat-v">65% (66/101)</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Avg. DOM Load</div><div class="audit-stat-v">2635 ms (max 24217)</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">0 JSON-LD Schemas</div><div class="audit-stat-v">21% (21/101)</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Heavy Payload (&ge;3 MB)</div><div class="audit-stat-v">78% (79/101)</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">390px Mobile Overflow</div><div class="audit-stat-v">5 stores</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Live Stores Audited</div><div class="audit-stat-v">145</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Avg. External Scripts</div><div class="audit-stat-v">43.8 (max 160)</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">35+ External Scripts</div><div class="audit-stat-v">62% (90/145)</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Avg. DOM Load</div><div class="audit-stat-v">2756 ms (max 24509)</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">0 JSON-LD Schemas</div><div class="audit-stat-v">20% (29/145)</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Heavy Payload (&ge;3 MB)</div><div class="audit-stat-v">79% (114/145)</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">390px Mobile Overflow</div><div class="audit-stat-v">7 stores</div></div>
       <div class="audit-stat"><div class="audit-stat-k">Methodology</div><div class="audit-stat-v">Real Chromium</div></div>
     </div>
 
     <div class="audit-card">
       <h2 class="audit-card-title">1. The 3 Highest-Impact Fixes You Can Apply in 15 Minutes (Free)</h2>
       <ol class="audit-findings-list">
-        <li><strong>Remove Orphaned App Embeds in <code>theme.liquid</code>:</strong> 65% of stores load 35+ external scripts. Uninstalling a Shopify app from Admin does <em>not</em> always remove its legacy <code>&lt;script&gt;</code> tags from your theme files.</li>
-        <li><strong>Fix Missing Organization/Product JSON-LD Schema:</strong> 21% of audited storefronts expose zero <code>application/ld+json</code> tags on entry, hurting Google Shopping rich price/stock snippets during Black Friday search spikes.</li>
-        <li><strong>Cut Heavy Mobile Payloads (&ge;3 MB) &amp; Lock 390px Overflow:</strong> 78% of audited storefronts transfer 3+ MB on initial mobile entry, and 5 leak horizontal overflow at 390px. Adding <code>html, body { max-width: 100%; overflow-x: clip; }</code> stops checkout jitter immediately.</li>
+        <li><strong>Remove Orphaned App Embeds in <code>theme.liquid</code>:</strong> 62% of stores load 35+ external scripts. Uninstalling a Shopify app from Admin does <em>not</em> always remove its legacy <code>&lt;script&gt;</code> tags from your theme files.</li>
+        <li><strong>Fix Missing Organization/Product JSON-LD Schema:</strong> 20% of audited storefronts expose zero <code>application/ld+json</code> tags on entry, hurting Google Shopping rich price/stock snippets during Black Friday search spikes.</li>
+        <li><strong>Cut Heavy Mobile Payloads (&ge;3 MB) &amp; Lock 390px Overflow:</strong> 79% of audited storefronts transfer 3+ MB on initial mobile entry, and 7 leak horizontal overflow at 390px. Adding <code>html, body { max-width: 100%; overflow-x: clip; }</code> stops checkout jitter immediately.</li>
       </ol>
       <pre class="code-preview"><code>/* Free Copy-Paste Mobile Overflow &amp; CLS Safety Patch */
 html, body { max-width: 100%; overflow-x: clip; }
@@ -63,6 +63,16 @@ img { max-width: 100%; height: auto; }</code></pre>
             </tr>
           </thead>
           <tbody>
+          <tr>
+            <td><a href="audits/terradomi-ca.html">terradomi.ca</a></td>
+            <td>Shopify</td>
+            <td><strong>160</strong></td>
+            <td>2483 ms</td>
+            <td>2.7 MB</td>
+            <td>0</td>
+            <td>20</td>
+            <td>0 px</td>
+          </tr>
           <tr>
             <td><a href="audits/fellowproducts-com.html">fellowproducts.com</a></td>
             <td>Shopify</td>
@@ -124,6 +134,16 @@ img { max-width: 100%; height: auto; }</code></pre>
             <td>0 px</td>
           </tr>
           <tr>
+            <td><a href="audits/thefoggydog-com.html">thefoggydog.com</a></td>
+            <td>Shopify</td>
+            <td><strong>86</strong></td>
+            <td>3612 ms</td>
+            <td>5.1 MB</td>
+            <td>2</td>
+            <td>50</td>
+            <td>0 px</td>
+          </tr>
+          <tr>
             <td><a href="audits/goldfieldandbanks-com.html">goldfieldandbanks.com</a></td>
             <td>Shopify</td>
             <td><strong>82</strong></td>
@@ -131,6 +151,16 @@ img { max-width: 100%; height: auto; }</code></pre>
             <td>18.2 MB</td>
             <td>3</td>
             <td>59</td>
+            <td>0 px</td>
+          </tr>
+          <tr>
+            <td><a href="audits/mantaraycoffee-com-au.html">mantaraycoffee.com.au</a></td>
+            <td>Shopify</td>
+            <td><strong>78</strong></td>
+            <td>7611 ms</td>
+            <td>7.2 MB</td>
+            <td>1</td>
+            <td>28</td>
             <td>0 px</td>
           </tr>
           <tr>
@@ -204,6 +234,16 @@ img { max-width: 100%; height: auto; }</code></pre>
             <td>0 px</td>
           </tr>
           <tr>
+            <td><a href="audits/earthwoven-co-nz.html">earthwoven.co.nz</a></td>
+            <td>Shopify</td>
+            <td><strong>69</strong></td>
+            <td>2273 ms</td>
+            <td>3.9 MB</td>
+            <td>3</td>
+            <td>21</td>
+            <td>0 px</td>
+          </tr>
+          <tr>
             <td><a href="audits/anythingcoffee-co-uk.html">anythingcoffee.co.uk</a></td>
             <td>Shopify</td>
             <td><strong>68</strong></td>
@@ -221,6 +261,16 @@ img { max-width: 100%; height: auto; }</code></pre>
             <td>3.0 MB</td>
             <td>4</td>
             <td>9</td>
+            <td>0 px</td>
+          </tr>
+          <tr>
+            <td><a href="audits/holtzleather-com.html">holtzleather.com</a></td>
+            <td>Shopify</td>
+            <td><strong>67</strong></td>
+            <td>2145 ms</td>
+            <td>18.8 MB</td>
+            <td>1</td>
+            <td>29</td>
             <td>0 px</td>
           </tr>
           <tr>
@@ -263,56 +313,6 @@ img { max-width: 100%; height: auto; }</code></pre>
             <td>46</td>
             <td>0 px</td>
           </tr>
-          <tr>
-            <td><a href="audits/jdpetboutique-com.html">jdpetboutique.com</a></td>
-            <td>Shopify</td>
-            <td><strong>64</strong></td>
-            <td>1865 ms</td>
-            <td>2.3 MB</td>
-            <td>1</td>
-            <td>7</td>
-            <td>0 px</td>
-          </tr>
-          <tr>
-            <td><a href="audits/cutsclothing-com.html">cutsclothing.com</a></td>
-            <td>Shopify</td>
-            <td><strong>64</strong></td>
-            <td>1857 ms</td>
-            <td>105.6 MB</td>
-            <td>2</td>
-            <td>55</td>
-            <td>0 px</td>
-          </tr>
-          <tr>
-            <td><a href="audits/inbedstore-com.html">inbedstore.com</a></td>
-            <td>Shopify</td>
-            <td><strong>64</strong></td>
-            <td>2504 ms</td>
-            <td>11.8 MB</td>
-            <td>2</td>
-            <td>43</td>
-            <td>0 px</td>
-          </tr>
-          <tr>
-            <td><a href="audits/dbjourney-com.html">dbjourney.com</a></td>
-            <td>Shopify</td>
-            <td><strong>63</strong></td>
-            <td>3801 ms</td>
-            <td>38.0 MB</td>
-            <td>2</td>
-            <td>47</td>
-            <td>0 px</td>
-          </tr>
-          <tr>
-            <td><a href="audits/tentree-com.html">tentree.com</a></td>
-            <td>Shopify</td>
-            <td><strong>63</strong></td>
-            <td>2022 ms</td>
-            <td>4.1 MB</td>
-            <td>0</td>
-            <td>41</td>
-            <td>0 px</td>
-          </tr>
           </tbody>
         </table>
       </div>
@@ -323,9 +323,9 @@ img { max-width: 100%; height: auto; }</code></pre>
       <p class="audit-cta-copy">Enter promo code <strong><code>BFCM50</code></strong> on Stripe or Gumroad through Nov 30 (<strong>$4.50</strong> Quick-Win / <strong>$14.50</strong> Liquid Kit / <strong>$24.50</strong> Custom 40-Pt Fix Pack). Digital kits deliver automatically in <strong>&lt;60 seconds</strong> (14-day 100% refund guarantee). Or run our <a href="https://github.com/BoluS095/shopify-speed-bloat-auditor" target="_blank" rel="noopener">free MIT CLI</a> yourself.</p>
       <div class="audit-cta-btns">
         <a class="audit-btn audit-btn-p" href="https://buy.stripe.com/7sYfZggMbcxL6f4gw2cs81o" target="_blank" rel="noopener">Quick-Win ($4.50 w/ BFCM50, Stripe) &rarr;</a>
-        <a class="audit-btn audit-btn-o" href="https://bolus.gumroad.com/l/shopify-speed-quickwin" target="_blank" rel="noopener">Quick-Win on Gumroad ($4.50 w/ BFCM50)</a>
+        <a class="audit-btn audit-btn-o" href="https://bolus.gumroad.com/l/shopify-speed-quickwin/BFCM50" target="_blank" rel="noopener">Quick-Win on Gumroad ($4.50 Auto-50% OFF)</a>
         <a class="audit-btn audit-btn-o" href="https://buy.stripe.com/28E4gy2Vl41ffPEdjQcs81i" target="_blank" rel="noopener">Liquid Kit ($14.50 w/ BFCM50, Stripe)</a>
-        <a class="audit-btn audit-btn-o" href="https://bolus.gumroad.com/l/shopify-cro-liquid-kit" target="_blank" rel="noopener">Liquid Kit on Gumroad ($14.50 w/ BFCM50)</a>
+        <a class="audit-btn audit-btn-o" href="https://bolus.gumroad.com/l/shopify-cro-liquid-kit/BFCM50" target="_blank" rel="noopener">Liquid Kit on Gumroad ($14.50 Auto-50% OFF)</a>
         <a class="audit-btn audit-btn-o" href="https://buy.stripe.com/3cI00i67x69n7j893Acs81l" target="_blank" rel="noopener">Custom 40-Pt Fix Pack ($24.50 w/ BFCM50)</a>
         <a class="audit-btn audit-btn-o" href="https://buy.stripe.com/bJe5kC2VlbtHgTIbbIcs81m" target="_blank" rel="noopener">Done-For-You 24-48h Rescue ($99.50 w/ BFCM50)</a>
       </div>
