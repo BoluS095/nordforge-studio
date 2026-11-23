@@ -15,7 +15,7 @@
     </div>
 
     <div class="bfcm-alert">
-      <strong>Black Friday 2026 Readiness Alert:</strong> Flagged on <code>holtzleather.com</code> &mdash; <strong>57 external scripts • 22.8 MB page weight • 2099ms DOM load • ~$94/mo detected apps</strong>. Fix these leaks before peak Nov 27 mobile traffic hits checkout.
+      <strong>Black Friday 2026 Readiness Alert:</strong> Flagged on <code>holtzleather.com</code> &mdash; <strong>67 external scripts • 18.8 MB page weight • 2145ms DOM load • ~$94/mo detected apps</strong>. Fix these leaks before peak Nov 27 mobile traffic hits checkout.
     </div>
 
     <h1 class="audit-title">Forensic Conversion &amp; Speed Audit: holtzleather.com</h1>
@@ -36,10 +36,10 @@
     </div>
 
     <div class="audit-stats-grid">
-      <div class="audit-stat "><div class="audit-stat-k">DOM Content Loaded</div><div class="audit-stat-v">2099 ms</div></div>
-      <div class="audit-stat audit-stat-danger"><div class="audit-stat-k">External Scripts</div><div class="audit-stat-v">57</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">3rd-Party Hosts</div><div class="audit-stat-v">30</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Measured Payload</div><div class="audit-stat-v">23358 KB</div></div>
+      <div class="audit-stat "><div class="audit-stat-k">DOM Content Loaded</div><div class="audit-stat-v">2145 ms</div></div>
+      <div class="audit-stat audit-stat-danger"><div class="audit-stat-k">External Scripts</div><div class="audit-stat-v">67</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">3rd-Party Hosts</div><div class="audit-stat-v">29</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Measured Payload</div><div class="audit-stat-v">19280 KB</div></div>
       <div class="audit-stat "><div class="audit-stat-k">JSON-LD Schemas</div><div class="audit-stat-v">1</div></div>
       <div class="audit-stat "><div class="audit-stat-k">Failed Assets / No-Alt Imgs</div><div class="audit-stat-v">0 / 10</div></div>
       <div class="audit-stat "><div class="audit-stat-k">Mobile Overflow (390px)</div><div class="audit-stat-v">0 px</div></div>
@@ -63,11 +63,11 @@
     <div class="audit-card">
       <h2 class="audit-card-title">Top 3 Verified Findings (Measured in Chromium)</h2>
       <ol class="audit-findings-list">
-        <li>Script &amp; Third-Party Bloat: Measured 57 external scripts across 30 third-party domains (23358 KB transferred including detected paid apps (Klaviyo, Yotpo, est. ~$94/mo)), extending DOM load to 2099 ms.</li>
+        <li>Script &amp; Third-Party Bloat: Measured 67 external scripts across 29 third-party domains (19280 KB transferred including detected paid apps (Yotpo, Klaviyo, est. ~$94/mo)), extending DOM load to 2145 ms.</li>
         <li>Media &amp; Accessibility Gaps: 10 image(s) missing alt text detected across 73 DOM images.</li>
-        <li>Render Timing Opportunity: TTFB measured at 775 ms with 2099 ms full load; deferring non-critical embeds and hardening canonical/schema tags reduces checkout drop-off.</li>
+        <li>Render Timing Opportunity: TTFB measured at 546 ms with 2145 ms full load; deferring non-critical embeds and hardening canonical/schema tags reduces checkout drop-off.</li>
       </ol>
-      <p class="audit-quickwin"><strong>Fastest Engineering Win:</strong> Defer or inline Klaviyo, Yotpo and verify Product/Organization JSON-LD + image compression.</p>
+      <p class="audit-quickwin"><strong>Fastest Engineering Win:</strong> Defer or inline Yotpo, Klaviyo and verify Product/Organization JSON-LD + image compression.</p>
     </div>
 
     <div class="audit-card">
@@ -75,7 +75,7 @@
       <p class="audit-quickwin">Apply this verified snippet right away &mdash; zero strings attached:</p>
       <pre class="code-preview"><code>/* Free Instant Fix #1 for holtzleather.com: Safe image &amp; CLS guard */
 img { max-width: 100%; height: auto; }
-/* Audit heavy scripts (57 detected) and defer non-critical embeds */</code></pre>
+/* Audit heavy scripts (67 detected) and defer non-critical embeds */</code></pre>
     </div>
 
     <div class="audit-cta-box">
