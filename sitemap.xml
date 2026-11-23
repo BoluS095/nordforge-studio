@@ -468,4 +468,20 @@
     <loc>https://bolus095.github.io/nordforge-studio/audits/20grams-dk.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/tinyarms-co.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/boundaryroastingco-ca.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/terradomi-ca.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/awildsoapbar-com.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
