@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free 2027 Interactive Debt-Free Date &amp; 50/30/20 Paycheck Calculator | NordForge</title>
+  <meta name="description" content="Free, zero-signup 2027 Debt Snowball payoff date calculator, 50/30/20 monthly budget simulator &amp; 12-month savings planner. Instant results in your browser." />
+  <link rel="canonical" href="https://bolus095.github.io/nordforge-studio/2027-budget-calculator.html" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bfcm-ribbon">
+    <strong>2027 Financial Reset Flash Sale:</strong> Get the complete 6-Tab Automated Excel/Sheets + iPad PDF + Notion OS Bundle for <strong>$3.50 (50% OFF w/ BFCM50)</strong> &mdash;
+    <a href="https://bolus.gumroad.com/l/2027-ultimate-budget-planner/BFCM50" target="_blank" rel="noopener">Get $3.50 Bundle &rarr;</a>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-dot"></span>NordForge Studio</a>
+      <nav class="nav-links">
+        <a href="2027-budget-calculator.html">2027 Budget Sim</a>
+        <a href="ai-prompt-generator.html">XML Prompt Gen</a>
+        <a href="speed-checker.html">Free Speed Scanner</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tool-shell">
+    <span class="badge">100% Free &bull; Zero Signup &bull; Private In-Browser Calculation</span>
+    <h1>2027 Debt-Free Date &amp; 50/30/20 Wealth Simulator</h1>
+    <p class="lead">
+      Adjust your real numbers below to see the exact month you become <strong>100% debt-free</strong>, how much interest you eliminate with a Debt Snowball boost, and how much cash you stack across all 12 months of 2027.
+    </p>
+
+    <div class="tool-card">
+      <div class="tool-grid-2">
+        <div class="field">
+          <label for="b-income">Monthly Take-Home Pay ($)</label>
+          <input id="b-income" type="number" value="4400" min="500" step="100" />
+        </div>
+        <div class="field">
+          <label for="b-needs">Monthly Essentials / Rent / Bills ($)</label>
+          <input id="b-needs" type="number" value="2300" min="0" step="50" />
+        </div>
+        <div class="field">
+          <label for="b-wants">Monthly Wants &amp; Subscriptions ($)</label>
+          <input id="b-wants" type="number" value="950" min="0" step="50" />
+        </div>
+        <div class="field">
+          <label for="b-debt">Total Credit Card / Loan Debt ($)</label>
+          <input id="b-debt" type="number" value="6800" min="0" step="200" />
+        </div>
+        <div class="field">
+          <label for="b-apr">Average Debt Interest APR (%)</label>
+          <input id="b-apr" type="number" value="19.9" min="0" max="45" step="0.5" />
+        </div>
+        <div class="field">
+          <label for="b-min">Current Minimum Debt Payment ($/mo)</label>
+          <input id="b-min" type="number" value="210" min="25" step="15" />
+        </div>
+      </div>
+
+      <div class="tool-kpi-grid">
+        <div class="tool-kpi">
+          <div class="tool-kpi-label">Monthly Cash Surplus</div>
+          <div id="out-surplus" class="tool-kpi-val tool-kpi-good">$1,150</div>
+        </div>
+        <div class="tool-kpi">
+          <div class="tool-kpi-label">Exact Debt-Free Target</div>
+          <div id="out-date" class="tool-kpi-val tool-kpi-good">Jun 2027</div>
+        </div>
+        <div class="tool-kpi">
+          <div class="tool-kpi-label">Interest Saved vs Minimums</div>
+          <div id="out-saved" class="tool-kpi-val tool-kpi-warn">$3,410</div>
+        </div>
+        <div class="tool-kpi">
+          <div class="tool-kpi-label">12-Month 2027 Net Improvement</div>
+          <div id="out-year" class="tool-kpi-val tool-kpi-good">+$13,800</div>
+        </div>
+      </div>
+
+      <h3>Your Personalized 2027 Action Blueprint</h3>
+      <pre id="out-plan" class="tool-code-out"></pre>
+
+      <div class="tool-upgrade-banner">
+        <h3 class="tool-upgrade-title">Want This Automated Across All 12 Months of 2027?</h3>
+        <p class="tool-upgrade-sub">
+          Grab our <strong>Free 2027 Starter Budget ($0+ Pay What You Want)</strong> or unlock the complete <strong>6-Tab Auto-Formula Excel &amp; Google Sheets Workbook + Printable iPad 2027 Goal Planner + Notion Life OS</strong> for just <strong>$3.50</strong> (90% cheaper than $29 Etsy bundles &mdash; 50% OFF code <code>BFCM50</code> auto-applied!).
+        </p>
+        <div class="tool-btn-row">
+          <a class="btn btn-primary" href="https://bolus.gumroad.com/l/2027-ultimate-budget-planner/BFCM50" target="_blank" rel="noopener">Get Full 2027 Ultimate Bundle &mdash; $3.50 (50% OFF) &rarr;</a>
+          <a class="btn btn-outline" href="https://bolus.gumroad.com/l/2027-free-budget-starter" target="_blank" rel="noopener">Download Free Starter Sheet ($0+)</a>
+          <a class="btn btn-outline" href="https://buy.stripe.com/7sY4gy3ZpfJX7j8cfMcs81q" target="_blank" rel="noopener">Pay via Stripe ($4.50 w/ BFCM50)</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const ids = ["b-income", "b-needs", "b-wants", "b-debt", "b-apr", "b-min"];
+      const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+      function simPayoff(balance, aprPct, monthlyPay) {
+        if (balance <= 0) return { months: 0, interest: 0 };
+        const r = (aprPct / 100) / 12;
+        let b = balance;
+        let m = 0;
+        let totalInt = 0;
+        while (b > 0.5 && m < 360) {
+          const interest = b * r;
+          totalInt += interest;
+          if (monthlyPay <= interest + 1) return { months: 360, interest: totalInt };
+          b = b + interest - monthlyPay;
+          m++;
+        }
+        return { months: m, interest: totalInt };
+      }
+
+      function recalc() {
+        const inc = Math.max(0, Number(document.getElementById("b-income").value) || 0);
+        const needs = Math.max(0, Number(document.getElementById("b-needs").value) || 0);
+        const wants = Math.max(0, Number(document.getElementById("b-wants").value) || 0);
+        const debt = Math.max(0, Number(document.getElementById("b-debt").value) || 0);
+        const apr = Math.max(0, Number(document.getElementById("b-apr").value) || 0);
+        const minPay = Math.max(10, Number(document.getElementById("b-min").value) || 25);
+
+        const surplus = inc - needs - wants;
+        const snowballPay = Math.max(minPay, surplus > 0 ? surplus : minPay);
+        const fast = simPayoff(debt, apr, snowballPay);
+        const slow = simPayoff(debt, apr, minPay);
+
+        const now = new Date();
+        const target = new Date(now.getFullYear(), now.getMonth() + fast.months, 1);
+        const dateStr = debt <= 0 ? "Debt-Free Now!" : fast.months >= 360 ? "Increase Surplus" : (months[target.getMonth()] + " " + target.getFullYear());
+        const intSaved = Math.max(0, Math.round(slow.interest - fast.interest));
+        const yearGain = Math.round(Math.max(0, surplus) * 12);
+
+        const sEl = document.getElementById("out-surplus");
+        sEl.textContent = (surplus >= 0 ? "$" : "-$") + Math.abs(Math.round(surplus)).toLocaleString();
+        sEl.className = "tool-kpi-val " + (surplus >= 300 ? "tool-kpi-good" : surplus >= 0 ? "tool-kpi-warn" : "tool-kpi-bad");
+
+        document.getElementById("out-date").textContent = dateStr;
+        document.getElementById("out-saved").textContent = "$" + intSaved.toLocaleString();
+        document.getElementById("out-year").textContent = (yearGain >= 0 ? "+$" : "$") + yearGain.toLocaleString();
+
+        const needsPct = inc > 0 ? Math.round((needs / inc) * 100) : 0;
+        const wantsPct = inc > 0 ? Math.round((wants / inc) * 100) : 0;
+        const savePct = Math.max(0, 100 - needsPct - wantsPct);
+
+        document.getElementById("out-plan").textContent = [
+          "2027 50/30/20 RATIO CHECK:",
+          "• Needs: " + needsPct + "% (target <=50%) | Wants: " + wantsPct + "% (target <=30%) | Debt/Wealth Fuel: " + savePct + "% (target >=20%)",
+          "",
+          "SNOWBALL EXECUTION:",
+          debt > 0
+            ? "• Direct $" + Math.round(snowballPay).toLocaleString() + "/mo at your debt to clear $" + Math.round(debt).toLocaleString() + " in " + fast.months + " month(s) (" + dateStr + ") and save ~$" + intSaved.toLocaleString() + " in interest!"
+            : "• Zero high-interest debt! Route $" + Math.max(0, Math.round(surplus)).toLocaleString() + "/mo straight into your 3–6 month High-Yield Emergency Fund + Index ETFs.",
+          "• Once debt hits $0, automatically roll that full $" + Math.round(snowballPay).toLocaleString() + "/mo into your 2027 Net Worth Builder tab."
+        ].join("\n");
+      }
+
+      ids.forEach(function (id) {
+        document.getElementById(id).addEventListener("input", recalc);
+      });
+      recalc();
+    })();
+  </script>
+</body>
+</html>

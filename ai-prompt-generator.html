@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Claude, ChatGPT &amp; Cursor XML Super-Prompt &amp; .cursorrules Generator | NordForge</title>
+  <meta name="description" content="Turn any 1-line idea into a production Anthropic-grade XML system prompt, Cursor .cursorrules file, CLAUDE.md contract, or n8n AI agent specification — 100% free, zero signup." />
+  <link rel="canonical" href="https://bolus095.github.io/nordforge-studio/ai-prompt-generator.html" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bfcm-ribbon">
+    <strong>Black Friday AI Builder Vaults (50% OFF Auto-Applied):</strong>
+    <a href="https://bolus.gumroad.com/l/ai-operator-60-playbooks/BFCM50" target="_blank" rel="noopener">60 XML Playbooks ($2.50)</a> &bull;
+    <a href="https://bolus.gumroad.com/l/n8n-ai-agents-claude-mcp-vault/BFCM50" target="_blank" rel="noopener">15 n8n Agents + 10 MCP Rules ($4.50) &rarr;</a>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-dot"></span>NordForge Studio</a>
+      <nav class="nav-links">
+        <a href="ai-prompt-generator.html">XML Prompt Gen</a>
+        <a href="2027-budget-calculator.html">2027 Budget Sim</a>
+        <a href="speed-checker.html">Free Speed Scanner</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tool-shell">
+    <span class="badge">100% Free &bull; Zero Signup &bull; Anthropic XML + Cursor + MCP Ready</span>
+    <h1>XML Super-Prompt, <code>CLAUDE.md</code> &amp; <code>.cursorrules</code> Architect</h1>
+    <p class="lead">
+      Stop getting generic AI slop. Enter any rough task or tech stack below and instantly compile a structured <strong>XML System Prompt</strong>, <strong>Cursor <code>.cursorrules</code></strong>, <strong><code>CLAUDE.md</code> contract</strong>, or <strong>n8n AI Agent spec</strong> with explicit guardrails, output schema, and self-verification.
+    </p>
+
+    <div class="tool-card">
+      <div class="tool-input-row">
+        <select id="p-mode" class="tool-select" aria-label="Output format">
+          <option value="xml">Anthropic / ChatGPT XML System Prompt</option>
+          <option value="cursor">Cursor IDE .cursorrules File</option>
+          <option value="claude">Claude Code CLAUDE.md Contract</option>
+          <option value="n8n">n8n AI Agent Structured JSON Node</option>
+        </select>
+        <button id="gen-btn" class="btn btn-primary" type="button">Compile Production Prompt &rarr;</button>
+        <button id="copy-btn" class="btn btn-outline" type="button">1-Click Copy</button>
+      </div>
+      <textarea id="p-goal" class="tool-textarea" placeholder="Describe your task or stack (e.g., Write proof-first B2B cold emails for SaaS founders without sounding robotic)">Build a Next.js 15 + TypeScript + Stripe + PostgreSQL SaaS app with strict tenant isolation and zero runtime type bugs</textarea>
+
+      <div class="tool-chips">
+        <span class="tool-chip" data-mode="xml" data-goal="Turn a rough YouTube transcript into a high-engagement LinkedIn post, 5-tweet X thread, and actionable newsletter summary">Preset: Viral Content Repurposer</span>
+        <span class="tool-chip" data-mode="xml" data-goal="Analyze a SaaS landing page and output top 5 conversion bottlenecks with exact copy rewrites and A/B test hypotheses">Preset: CRO Landing Page Teardown</span>
+        <span class="tool-chip" data-mode="cursor" data-goal="Shopify Online Store 2.0 Dawn theme Liquid sections with <2.5s LCP, zero layout shift, and native JSON-LD schema">Preset: Shopify Liquid .cursorrules</span>
+        <span class="tool-chip" data-mode="n8n" data-goal="Classify inbound Gmail replies into Hot Buyer Lead, Support Question, OOO Auto-Reply, or Unsubscribe and draft a human reply">Preset: n8n Inbox Lead Qualifier</span>
+      </div>
+
+      <pre id="p-out" class="tool-code-out"></pre>
+
+      <div class="tool-upgrade-banner">
+        <h3 class="tool-upgrade-title">Want All 60 Pre-Built XML Playbooks + 15 Importable n8n AI Agent JSONs?</h3>
+        <p class="tool-upgrade-sub">
+          Skip hours of prompt engineering. Grab our searchable offline vault of <strong>60 Anthropic-Grade AI Operator Playbooks ($2.50 w/ BFCM50)</strong> or the <strong>15 Production n8n AI Agent Workflows + 10 Claude/MCP Security Rules ($4.50 w/ BFCM50)</strong> &mdash; 90% cheaper than $49 prompt packs!
+        </p>
+        <div class="tool-btn-row">
+          <a class="btn btn-primary" href="https://bolus.gumroad.com/l/ai-operator-60-playbooks/BFCM50" target="_blank" rel="noopener">Get 60 XML AI Playbooks &mdash; $2.50 (50% OFF) &rarr;</a>
+          <a class="btn btn-outline" href="https://bolus.gumroad.com/l/n8n-ai-agents-claude-mcp-vault/BFCM50" target="_blank" rel="noopener">15 n8n Agents + 10 MCP Rules &mdash; $4.50</a>
+          <a class="btn btn-outline" href="https://bolus.gumroad.com/l/n8n-claude-starter-pack" target="_blank" rel="noopener">Free Starter ZIP ($0+)</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const modeEl = document.getElementById("p-mode");
+      const goalEl = document.getElementById("p-goal");
+      const outEl = document.getElementById("p-out");
+      const genBtn = document.getElementById("gen-btn");
+      const copyBtn = document.getElementById("copy-btn");
+
+      function buildPrompt() {
+        const mode = modeEl.value;
+        const goal = (goalEl.value || "").trim() || "Execute the user's objective with senior-principal precision.";
+        if (mode === "cursor") {
+          outEl.textContent = [
+            "# .cursorrules — Production Engineering Rules",
+            "## Primary Stack & Objective",
+            goal,
+            "",
+            "## Non-Negotiable Rules",
+            "1. Read adjacent types, schemas, and tests before modifying any file.",
+            "2. Strict type safety: zero `any` on public interfaces, validate all external inputs with Zod/Pydantic.",
+            "3. Enforce authentication & tenant/user authorization on every mutating route and DB query.",
+            "4. Handle loading, empty, timeout, and error states explicitly; never swallow exceptions silently.",
+            "5. Keep diffs minimal and surgical — no unrequested refactors or extra dependencies.",
+            "6. Prove every bug fix Red -> Green with a focused test before reporting completion."
+          ].join("\n");
+          return;
+        }
+        if (mode === "claude") {
+          outEl.textContent = [
+            "# CLAUDE.md — Operating Contract",
+            "## Mission",
+            goal,
+            "",
+            "## Execution Workflow",
+            "- **Inspect first:** Batch parallel file reads to understand existing architecture before writing code.",
+            "- **Sync contracts:** Keep DB schema -> shared validators/types -> server routes -> UI client synchronized.",
+            "- **Zero fabrication:** Never claim a build, test, or HTTP check passed without running it and observing exit code 0.",
+            "- **Security baseline:** Parameterized queries only, constant-time webhook signature verification, zero secrets in code/logs."
+          ].join("\n");
+          return;
+        }
+        if (mode === "n8n") {
+          outEl.textContent = [
+            "<agent_spec>",
+            "  <role>Autonomous n8n Workflow Decision Agent</role>",
+            "  <objective>" + goal + "</objective>",
+            "  <guardrails>",
+            "    - Ignore automated out-of-office, noreply, and mailer-daemon bounce messages.",
+            "    - Never fabricate URLs, order numbers, prices, or customer facts.",
+            "    - Return STRICT valid JSON matching <output_schema> with zero markdown fences.",
+            "  </guardrails>",
+            "  <output_schema>",
+            "    {",
+            '      "classification": "hot_lead | support | auto_reply | opt_out",',
+            '      "confidence": 0.0,',
+            '      "requires_human_review": false,',
+            '      "recommended_action": "string",',
+            '      "draft_response": "string"',
+            "    }",
+            "  </output_schema>",
+            "</agent_spec>"
+          ].join("\n");
+          return;
+        }
+        outEl.textContent = [
+          "<system_prompt>",
+          "  <role>",
+          "    You are a Principal-Level Specialist & Execution Operator with 15+ years of real-world production experience.",
+          "  </role>",
+          "  <objective>",
+          "    " + goal,
+          "  </objective>",
+          "  <constraints>",
+          "    1. Zero generic AI filler, clichés ('delve', 'unlock', 'game-changer'), or vague advice.",
+          "    2. Ground every recommendation in concrete numbers, exact steps, or copy-pasteable artifacts.",
+          "    3. State assumptions explicitly if any critical input is missing.",
+          "    4. Self-critique your draft against edge cases and clarity before emitting the final output.",
+          "  </constraints>",
+          "  <output_format>",
+          "    1. Executive Diagnosis / Core Strategy (3 bullet points max)",
+          "    2. Complete Production-Ready Deliverable (copy-paste ready)",
+          "    3. Verification Checklist & Highest-Leverage Next Step",
+          "  </output_format>",
+          "</system_prompt>"
+        ].join("\n");
+      }
+
+      genBtn.addEventListener("click", buildPrompt);
+      modeEl.addEventListener("change", buildPrompt);
+      document.querySelectorAll(".tool-chip").forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          modeEl.value = chip.getAttribute("data-mode");
+          goalEl.value = chip.getAttribute("data-goal");
+          buildPrompt();
+        });
+      });
+      copyBtn.addEventListener("click", function () {
+        navigator.clipboard.writeText(outEl.textContent || "");
+        copyBtn.textContent = "Copied!";
+        setTimeout(function () { copyBtn.textContent = "1-Click Copy"; }, 1800);
+      });
+
+      buildPrompt();
+    })();
+  </script>
+</body>
+</html>
