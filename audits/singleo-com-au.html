@@ -11,11 +11,11 @@
   <div class="audit-wrap">
     <div class="audit-nav">
       <a class="audit-brand-link" href="../index.html">&larr; NordForge AI Studio</a>
-      <span class="audit-badge">Live Chromium Telemetry Audit &bull; 2026-11-22</span>
+      <span class="audit-badge">Live Chromium Telemetry Audit &bull; 2026-11-24</span>
     </div>
 
     <div class="bfcm-alert">
-      <strong>Black Friday 2026 Readiness Alert:</strong> Flagged on <code>singleo.com.au</code> &mdash; <strong>52 external scripts • 15.0 MB page weight • 2892ms DOM load</strong>. Fix these leaks before peak Nov 27 mobile traffic hits checkout.
+      <strong>Black Friday 2026 Readiness Alert:</strong> Flagged on <code>singleo.com.au</code> &mdash; <strong>52 external scripts • 15.1 MB page weight • 2374ms DOM load • ~$159/mo detected apps</strong>. Fix these leaks before peak Nov 27 mobile traffic hits checkout.
     </div>
 
     <h1 class="audit-title">Forensic Conversion &amp; Speed Audit: singleo.com.au</h1>
@@ -28,16 +28,16 @@
       </div>
       <div class="audit-cta-btns">
         <a class="audit-btn audit-btn-p" href="https://bolus.gumroad.com/l/shopify-speed-quickwin/BFCM50" target="_blank" rel="noopener">Download Instant Speed Fix Pack &mdash; $4.50 (50% OFF) &rarr;</a>
-        <a class="audit-btn audit-btn-o" href="https://buy.stripe.com/=BFCM50" target="_blank" rel="noopener">No Coding? Done-For-You 4h Store Patch ($24.50 w/ BFCM50)</a>
+        <a class="audit-btn audit-btn-o" href="https://buy.stripe.com/3cI00i67x69n7j893Acs81l?prefilled_promo_code=BFCM50" target="_blank" rel="noopener">No Coding? Done-For-You 4h Store Patch ($24.50 w/ BFCM50)</a>
       </div>
-      <p class="audit-quickwin">Prefer Stripe card checkout for the DIY pack? <a href="https://buy.stripe.com/=BFCM50" target="_blank" rel="noopener">Pay $4.50 on Stripe (code BFCM50)</a> &bull; Need unlimited multi-store Liquid CRO templates? <a href="https://bolus.gumroad.com/l/shopify-cro-liquid-kit/BFCM50" target="_blank" rel="noopener">Liquid CRO Kit ($14.50 w/ BFCM50)</a>.</p>
+      <p class="audit-quickwin">Prefer Stripe card checkout for the DIY pack? <a href="https://buy.stripe.com/7sYfZggMbcxL6f4gw2cs81o?prefilled_promo_code=BFCM50" target="_blank" rel="noopener">Pay $4.50 on Stripe (code BFCM50)</a> &bull; Need unlimited multi-store Liquid CRO templates? <a href="https://bolus.gumroad.com/l/shopify-cro-liquid-kit/BFCM50" target="_blank" rel="noopener">Liquid CRO Kit ($14.50 w/ BFCM50)</a>.</p>
     </div>
 
     <div class="audit-stats-grid">
-      <div class="audit-stat audit-stat-danger"><div class="audit-stat-k">DOM Content Loaded</div><div class="audit-stat-v">2892 ms</div></div>
+      <div class="audit-stat audit-stat-danger"><div class="audit-stat-k">DOM Content Loaded</div><div class="audit-stat-v">2374 ms</div></div>
       <div class="audit-stat audit-stat-danger"><div class="audit-stat-k">External Scripts</div><div class="audit-stat-v">52</div></div>
       <div class="audit-stat"><div class="audit-stat-k">3rd-Party Hosts</div><div class="audit-stat-v">30</div></div>
-      <div class="audit-stat"><div class="audit-stat-k">Measured Payload</div><div class="audit-stat-v">15362 KB</div></div>
+      <div class="audit-stat"><div class="audit-stat-k">Measured Payload</div><div class="audit-stat-v">15427 KB</div></div>
       <div class="audit-stat "><div class="audit-stat-k">JSON-LD Schemas</div><div class="audit-stat-v">1</div></div>
       <div class="audit-stat "><div class="audit-stat-k">Failed Assets / No-Alt Imgs</div><div class="audit-stat-v">0 / 46</div></div>
       <div class="audit-stat "><div class="audit-stat-k">Mobile Overflow (390px)</div><div class="audit-stat-v">0 px</div></div>
@@ -61,11 +61,11 @@
     <div class="audit-card">
       <h2 class="audit-card-title">Top 3 Verified Findings (Measured in Chromium)</h2>
       <ol class="audit-findings-list">
-        <li>Script &amp; Third-Party Bloat: Measured 52 external scripts across 30 third-party domains (15362 KB transferred), extending DOM load to 2892 ms.</li>
-        <li>Media &amp; Accessibility Gaps: 0 broken image(s) (naturalWidth=0) and 46 image(s) without descriptive alt text detected across 94 DOM images.</li>
-        <li>Render Timing Opportunity: TTFB measured at 1484 ms with 4260 ms full load; deferring non-critical embeds and hardening canonical/schema tags reduces checkout drop-off.</li>
+        <li>Script &amp; Third-Party Bloat: Measured 52 external scripts across 30 third-party domains (15427 KB transferred including detected paid apps (Hextom, Recharge, Klaviyo, est. ~$159/mo)), extending DOM load to 2374 ms.</li>
+        <li>Media &amp; Accessibility Gaps: 46 image(s) missing alt text detected across 90 DOM images.</li>
+        <li>Render Timing Opportunity: TTFB measured at 1253 ms with 3503 ms full load; deferring non-critical embeds and hardening canonical/schema tags reduces checkout drop-off.</li>
       </ol>
-      <p class="audit-quickwin"><strong>Fastest Engineering Win:</strong> Defer or inline static.rechargecdn.com, static.klaviyo.com, static-tracking.klaviyo.com and verify Product/Organization JSON-LD + image alt tags.</p>
+      <p class="audit-quickwin"><strong>Fastest Engineering Win:</strong> Defer or inline Hextom, Recharge, Klaviyo and verify Product/Organization JSON-LD + image compression.</p>
     </div>
 
     <div class="audit-card">
@@ -81,8 +81,8 @@ img { max-width: 100%; height: auto; }
       <p class="audit-cta-copy">Digital kits deliver automatically in <strong>&lt;60 seconds</strong> (PayPal, Apple Pay, or Card — code <code>BFCM50</code> auto-applies 50% OFF through Nov 30). Don't want to touch Liquid right before Black Friday? Pick the <strong>$24.50 Store-Specific Patch</strong> (with <code>BFCM50</code>) or <strong>$99.50 Full 24h Hands-Free Rescue</strong> &mdash; 14-day 100% money-back guarantee.</p>
       <div class="audit-cta-btns">
         <a class="audit-btn audit-btn-p" href="https://bolus.gumroad.com/l/shopify-speed-quickwin/BFCM50" target="_blank" rel="noopener">Get Instant Speed Fix Pack &mdash; $4.50 (50% OFF) &rarr;</a>
-        <a class="audit-btn audit-btn-o" href="https://buy.stripe.com/=BFCM50" target="_blank" rel="noopener">Custom 40-Pt Store Patch ($24.50 w/ BFCM50)</a>
-        <a class="audit-btn audit-btn-o" href="https://buy.stripe.com/=BFCM50" target="_blank" rel="noopener">Hands-Free 24h Rescue ($99.50 w/ BFCM50)</a>
+        <a class="audit-btn audit-btn-o" href="https://buy.stripe.com/3cI00i67x69n7j893Acs81l?prefilled_promo_code=BFCM50" target="_blank" rel="noopener">Custom 40-Pt Store Patch ($24.50 w/ BFCM50)</a>
+        <a class="audit-btn audit-btn-o" href="https://buy.stripe.com/bJe5kC2VlbtHgTIbbIcs81m?prefilled_promo_code=BFCM50" target="_blank" rel="noopener">Hands-Free 24h Rescue ($99.50 w/ BFCM50)</a>
       </div>
     </div>
   </div>

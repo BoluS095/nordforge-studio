@@ -325,10 +325,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bolus095.github.io/nordforge-studio/audits/singleo-com-au.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://bolus095.github.io/nordforge-studio/audits/onacoffee-com-au.html</loc>
     <priority>0.8</priority>
   </url>
@@ -805,7 +801,47 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bolus095.github.io/nordforge-studio/black-friday-shopify-speed-report-2026.html</loc>
-    <priority>0.9</priority>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/andytownsf-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/catandcloud-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/coavacoffee-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/equatorcoffees-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/padrecoffee-com-au.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/marketlane-com-au.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/sevenseeds-com-au.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/singleo-com-au.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/marvellstreet-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/monarchcoffee-com.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bolus095.github.io/nordforge-studio/audits/goodboybob-com.html</loc>
+    <priority>0.8</priority>
   </url>
 </urlset>
